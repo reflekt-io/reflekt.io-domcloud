@@ -23,6 +23,9 @@ Proyek ini dibuat oleh kelompok C04 yang beranggotakan sebagai berikut.
 - [Muhammad Fikri Haryanto](https://github.com/mfikriharyanto) (2006525053)
 - [Teuku Faiz Aryasena](https://github.com/teukufaiz) (2006535716)
 
+## 📃 Ringkasan 📃
+
+
 ## 📋 Daftar Modul 📋
 - Journaling
 - Pojok Curhat
@@ -48,9 +51,11 @@ User yang sudah login dapat:
 - Menuliskan harapan pada Tembok Harapan
 - Melihat Ide Kegiatan setelah melakukan Journaling
 
-## 📚 Referensi 📚
+## 📑 Referensi 📑
 Berikut ini adalah sumber referensi yang digunakan dalam pembuatan proyek ini.
 - [django-template-heroku](https://github.com/laymonage/django-template-heroku)
+- [Efektivitas Kuesioner PHQ-9 Sebagai Skrining Deteksi Dini Depresi](https://www.alomedika.com/efektivitas-kuesioner-ph-9-sebagai-skrining-deteksi-dini-depresi/)
+- [The Patient Health Questionnaire (PHQ-9) - Overview](https://img3.reoveme.com/m/7dcac06741830f40.pdf)
 
 [actions-badge]: https://github.com/reflekt-io/reflekt.io/workflows/Test%20and%20Deploy/badge.svg
 [commits-gh]: https://github.com/reflekt-io/reflekt.io/commits/master
