@@ -98,11 +98,18 @@ jobs:
       run: coverage report -m
     - name: Generate coverage report to HTML
       run: coverage html
+    - name: Generate coverage report to XML
+      run: coverage xml
     - name: Upload overall test coverage
       uses: actions/upload-artifact@v2
       with:
         name: coverage
         path: htmlcov/
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        fail_ci_if_error: true
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
 
   Deployment:
     if: github.ref == 'refs/heads/master'
