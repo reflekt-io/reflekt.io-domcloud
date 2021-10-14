@@ -42,14 +42,14 @@ Berikut ini adalah daftar modul yang akan diimplementasikan.
 - Kutipan Penyemangat
 - Deteksi Dini Depresi
 - Ide Kegiatan untuk Perasaan yang Dirasakan
-- Contact Us
+- About Us
 
 ## 👥 Persona 👥
 ### 🔒 User Yang Tidak Login 🔒
 User yang tidak login dapat:
 - Melakukan deteksi dini depresi
 - Melihat Kutipan Penyemangat
-- Memberikan saran kepada pengembang aplikasi melalui Contact Us
+- Melihat detail aplikasi dan memberikan saran kepada pengembang aplikasi melalui About Us
 
 ### 🔑 User Yang Sudah Login 🔑
 User yang sudah login dapat:
