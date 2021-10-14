@@ -35,14 +35,14 @@ Kami menyadari bahwa depresi adalah suatu hal yang susah dideteksi, namun semaki
 Kami berharap aplikasi situs web kami yang kami namakan **reflekt<area>.io** dapat membantu orang-orang untuk menjalani hidup dengan lebih mudah di masa pandemi ini.
 
 ## 📋 Daftar Modul 📋
-Berikut ini adalah daftar modul yang akan diimplementasikan.
-- Journaling
-- Pojok Curhat
-- Tembok Harapan
-- Kutipan Penyemangat
-- Deteksi Dini Depresi
-- Ide Kegiatan untuk Perasaan yang Dirasakan
-- About Us
+Berikut ini adalah daftar modul yang akan diimplementasikan beserta pengembang dari setiap modul.
+- Journaling - Muhammad Athallah
+- Pojok Curhat - Kevin
+- Tembok Harapan - Teuku Faiz Aryasena
+- Kutipan Penyemangat - Aurelia Amanda Robert
+- Deteksi Dini Depresi - Loanda Gunawan
+- Ide Kegiatan untuk Perasaan yang Dirasakan - Muhammad Fikri Haryanto
+- About Us - Muhammad Bintang Azriel Aditya Wardhana
 
 ## 👥 Persona 👥
 ### 🔒 User Yang Tidak Login 🔒
