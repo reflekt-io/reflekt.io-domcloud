@@ -36,13 +36,13 @@ Kami berharap aplikasi situs web kami yang kami namakan **reflekt<area>.io** dap
 
 ## 📋 Daftar Modul 📋
 Berikut ini adalah daftar modul yang akan diimplementasikan beserta pengembang dari setiap modul.
-- Journaling - [Muhammad Athallah](https://github.com/determinedguy) (2006527481)
-- Pojok Curhat - [Kevin](https://github.com/vnctkevin) (2006483795)
-- Tembok Harapan - [Teuku Faiz Aryasena](https://github.com/teukufaiz) (2006535716)
+- Journaling - [Muhammad Athallah](https://github.com/determinedguy)
+- Pojok Curhat - [Kevin](https://github.com/vnctkevin)
+- Tembok Harapan - [Teuku Faiz Aryasena](https://github.com/teukufaiz)
 - Kutipan Penyemangat - [Aurelia Amanda Robert](https://github.com/orelar)
-- Deteksi Dini Depresi - [Loanda Gunawan](https://github.com/Gloanda) (2006521585)
-- Ide Kegiatan untuk Perasaan yang Dirasakan - [Muhammad Fikri Haryanto](https://github.com/mfikriharyanto) (2006525053)
-- About Us - [Muhammad Bintang Azriel Aditya Wardhana](https://github.com/bintangazriel) (2006536492)
+- Deteksi Dini Depresi - [Loanda Gunawan](https://github.com/Gloanda)
+- Ide Kegiatan untuk Perasaan yang Dirasakan - [Muhammad Fikri Haryanto](https://github.com/mfikriharyanto)
+- About Us - [Muhammad Bintang Azriel Aditya Wardhana](https://github.com/bintangazriel)
 
 ## 👥 Persona 👥
 ### 🔒 User Yang Tidak Login 🔒
