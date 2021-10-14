@@ -10,7 +10,7 @@ from .models import Curhatan
 class CurhatForm(forms.ModelForm):
     class Meta:
         model = Curhatan
-        fields=['to','fromNote','title', 'message']
+        fields=['fromCurhat','title', 'message']
 
         fromCurhat = forms.CharField(max_length=50)
         title = forms.CharField(max_length=100)

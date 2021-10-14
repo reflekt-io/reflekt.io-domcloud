@@ -23,8 +23,7 @@ def add_Curhat(request):
     if (form.is_valid() and request.method == 'POST'):
         # save the form data to model
         form.save()
-        # when saved go back to lab-3
-        return HttpResponseRedirect('/lab-4')
+    
     
     else:
         form = CurhatForm()
