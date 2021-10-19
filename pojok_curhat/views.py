@@ -14,7 +14,7 @@ def index(request):
     return render(request, 'index.html', response)
 
 @login_required(login_url='/admin/login/')
-def add_Curhat(request):
+def add_curhat(request):
   
     # create object of form
     form = CurhatForm(request.POST or None)
