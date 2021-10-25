@@ -6,11 +6,13 @@ from .forms import CurhatForm
 # imported login required
 from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/admin/login/')
 def index(request):
     Curhat = Curhatan.objects.all().values() 
     response = {'Curhat': Curhat}
     return render(request, 'index.html', response)
 
+@login_required(login_url='/admin/login/')
 def add_Curhat(request):
   
     # create object of form
@@ -28,10 +30,12 @@ def add_Curhat(request):
 
     return render(request, 'form.html', {'form': form})
 
+@login_required(login_url='/admin/login/')
 def Curhat_list(request):
     Curhat = Curhatan.objects.all().values()
     response = {'Curhat': Curhat}
     return render(request, 'cards.html', response)
+
 
 def navbar(request):
     return render(request, 'navbar.html')
