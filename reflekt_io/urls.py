@@ -22,10 +22,10 @@ urlpatterns = [
     path('', include('main.urls')),
     # URL integration
     path('journal/', include('journal.urls', namespace='journal')),
-    path('pojok-curhat/', include('pojok_curhat.urls')),
-    path('tembok-harapan/', include('tembok_harapan.urls')),
-    path('kutipan-penyemangat/', include('kutipan_penyemangat.urls')),
-    path('deteksi-depresi/', include('deteksi_depresi.urls')),
-    path('refleksi/', include('refleksi.urls')),
-    path('about-us/', include('about_us.urls')),
+    path('pojok-curhat/', include('pojok_curhat.urls', namespace='pojok_curhat')),
+    path('tembok-harapan/', include('tembok_harapan.urls', namespace='tembok_harapan')),
+    path('kutipan-penyemangat/', include('kutipan_penyemangat.urls', namespace='kutipan_penyemangat')),
+    path('deteksi-depresi/', include('deteksi_depresi.urls', namespace='deteksi_depresi')),
+    path('refleksi/', include('refleksi.urls', namespace='refleksi')),
+    path('about-us/', include('about_us.urls', namespace='about_us')),
 ]
