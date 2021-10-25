@@ -9,7 +9,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #F3BFB3;
 }
   
 nav li {
@@ -18,16 +18,16 @@ nav li {
 
 nav li a {
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 16px 32px;
     text-decoration: none;
 }
 
 nav li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #f7b6a2;
 }
 
 nav .active {
-    background-color: #5EA9BE;
+    background-color: #FDF8E2;
 }
