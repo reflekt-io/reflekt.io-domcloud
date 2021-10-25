@@ -18,7 +18,7 @@ class CurhatForm(forms.ModelForm):
         message = forms.Textarea()
 
         labels = {
-            'fromCurhat': _('From'),
+            'fromCurhat': _('Dari'),
             'title': _('Judul'),
             'message': _('Pesan'),
         }

@@ -13,11 +13,7 @@ def index(request):
     return render(request, 'index.html', response)
 
 @login_required(login_url='/admin/login/')
-<<<<<<< HEAD
 def add_Curhat(request):
-=======
-def add_curhat(request):
->>>>>>> cfee33232115e578018de7a5a6b4f4b0898ee223
   
     # create object of form
     form = CurhatForm(request.POST or None)
@@ -34,12 +30,8 @@ def add_curhat(request):
 
     return render(request, 'form.html', {'form': form})
 
-<<<<<<< HEAD
 @login_required(login_url='/admin/login/')
 def Curhat_list(request):
-=======
-def curhat_list(request):
->>>>>>> cfee33232115e578018de7a5a6b4f4b0898ee223
     Curhat = Curhatan.objects.all().values()
     response = {'Curhat': Curhat}
     return render(request, 'cards.html', response)
