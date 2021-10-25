@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Journal</title>
+  </head>
+  <body>
+   <h2>Bagaimana harimu?</h2>
+    <div>
+      <div>
+        <form method="POST" action="">
+          {%csrf_token%}
+          <p>Bagaimana perasaanmu?</p>
+          {{ form.feeling }}
+          <p>Seberapa cemaskah kamu?</p>
+          {{ form.anxiety_rate }}
+          <p>Ayo sini, ceritakan harimu.</p>
+          {{ form.summary }}
+          <br>
+          <div>
+            <button><a href="{% url 'journal:index' %}">Kembali</a></button>
+            <input type="submit" value="Submit"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

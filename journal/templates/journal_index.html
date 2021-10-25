@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journal History</title>
+  </head>
+  <body>
+    <h2>Daftar Journal</h2>
+    <table border="1">
+      <tr>
+        <th>Tanggal</th>
+        <th>Perasaan</th>
+        <th>Tingkat Kecemasan</th>
+        <th>Ringkasan</th>
+      </tr>
+      {% for journal in journals %}
+      <tr>
+        <td>{{ journal.date }}</td>
+        <td>{{ journal.feeling }}</td>
+        <td>{{ journal.anxiety_rate }}</td>
+        <td>{{ journal.summary }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>Ada yang ingin diceritakan hari ini?</p>
+    <button><a href="add-journal">New Journal</a></button>
+  </body>
+</html>
