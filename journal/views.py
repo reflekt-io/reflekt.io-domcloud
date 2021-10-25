@@ -1,5 +1,6 @@
+from django.http.response import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from django.http.response import HttpResponseRedirect
+from django.core import serializers
 from django.shortcuts import render
 from django.urls import reverse
 from journal.models import Journal
@@ -27,3 +28,9 @@ def add_journal(request):
     
     context['form']= form
     return render(request, "add_journal.html", context)
+
+@login_required(login_url='/admin/login/')
+def get_journal_json(request):
+    journals = Journal.objects.all()
+    data = serializers.serialize('json', journals)
+    return HttpResponse(data, content_type="application/json")
