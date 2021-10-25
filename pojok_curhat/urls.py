@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import curhat_list, index, add_curhat
+from .views import index, add_Curhat, navbar, Curhat_list
 
 app_name = "pojok_curhat"
 
 urlpatterns = [
-    path('', index),
-    path('add-curhat', add_curhat),
-    path('curhat-list', curhat_list)
+    path('', index, name='index'),
+    path('navbar.html', navbar, name='navbar'),
+    path('add-curhat', add_Curhat, name='add_curhat'),
+    path('curhat-list', Curhat_list, name='curhat_list'),
 ]

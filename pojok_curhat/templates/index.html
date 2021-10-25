@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pojok Curhat</title>
+
+    <link rel="stylesheet" href="{% static 'css/table.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/button.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
+
+</head>
+
+  <body>
+
+  <div id="nav-placeholder"></div>
+
+
+  <div class="btn-container">
+    <a href="/pojok-curhat/add-curhat" class="button">Curhat Disini</a>
+  </div>
+
+    <div class = "curhat-container">
+    <table id = "curhat">
+      <tr>
+        <th>From</th>
+        <th>Title</th>
+        <th>Message</th>
+      </tr>
+      <!-- TODO loop from Friend model -->
+      <!-- EXAMPLE SECTION -->
+      {% if Curhat %}
+        {% for curhatan in Curhat %}
+        <tr>
+            <td>{{ curhatan.fromCurhat }}</td>
+            <td>{{ curhatan.title }}</td>
+            <td>{{ curhatan.message }}</td>
+        </tr>
+        {% endfor %}
+      {% endif %}
+      <!-- END SECTION -->
+    </table>
+    </div>
+  </body>
+</html>
