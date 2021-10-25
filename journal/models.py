@@ -12,7 +12,7 @@ class Journal(models.Model):
         ])
     anxiety_rate = models.IntegerField(default=0,
         validators=[
-            MaxValueValidator(0),
-            MinValueValidator(10)
+            MinValueValidator(0),
+            MaxValueValidator(10)
         ])
     summary = models.TextField()
