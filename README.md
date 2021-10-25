@@ -64,7 +64,8 @@ User yang sudah login dapat:
 Berikut ini adalah sumber referensi yang digunakan dalam pembuatan proyek ini.
 - [django-template-heroku](https://github.com/laymonage/django-template-heroku)
 - [Efektivitas Kuesioner PHQ-9 Sebagai Skrining Deteksi Dini Depresi](https://www.alomedika.com/efektivitas-kuesioner-ph-9-sebagai-skrining-deteksi-dini-depresi/)
-- [The Patient Health Questionnaire-9 (PHQ-9) - Overview](https://img3.reoveme.com/m/7dcac06741830f40.pdf)
+- [The Patient Health Questionnaire (PHQ-9) - Overview](https://img3.reoveme.com/m/7dcac06741830f40.pdf)
+- [Relax Color Scheme » Blue » SchemeColor.com](https://www.schemecolor.com/relax-color.php)
 
 [actions-badge]: https://github.com/reflekt-io/reflekt.io/workflows/Test%20and%20Deploy/badge.svg
 [commits-gh]: https://github.com/reflekt-io/reflekt.io/commits/master
