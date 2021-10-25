@@ -1,6 +1,9 @@
 from django.urls import path
-from main.views import home
+from journal.views import index, add_journal
+
+app_name = "journal"
 
 urlpatterns = [
-    path('', home),
+    path('', index, name='index'),
+    path('add-journal', add_journal, name='add_journal'),
 ]

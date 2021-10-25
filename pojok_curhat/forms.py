@@ -4,6 +4,7 @@ from django import forms
 from django.forms import widgets
 from .models import Curhatan
 
+# https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django
 
 
 # CurhatForm class for views
@@ -12,20 +13,21 @@ class CurhatForm(forms.ModelForm):
         model = Curhatan
         fields=['fromCurhat','title', 'message']
 
-        fromCurhat = forms.CharField(max_length=50)
-        title = forms.CharField(max_length=100)
-        message = forms.CharField(max_length=300)
+        fromCurhat = forms.CharField(max_length=50, required=True)
+        title = forms.CharField(max_length=100, required=True)
+        message = forms.Textarea()
 
         labels = {
-
-            'fromCurhat': _('From'),
-            'title': _('Message Title'),
-            'message': _('Message'),
+            'fromCurhat': _('Dari'),
+            'title': _('Judul'),
+            'message': _('Pesan'),
         }
         widgets = {
-            'msg_message': forms.Textarea(),
+            'message': forms.Textarea(),
         }
 
         error_messages = {
 		    'required' : 'Input cannot be empty',
 	    }
+
+
