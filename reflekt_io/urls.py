@@ -21,7 +21,7 @@ urlpatterns = [
     # Main URL (currently hello world)
     path('', include('main.urls')),
     # URL integration
-    path('journal/', include('journal.urls')),
+    path('journal/', include('journal.urls', namespace='journal')),
     path('pojok-curhat/', include('pojok_curhat.urls')),
     path('tembok-harapan/', include('tembok_harapan.urls')),
     path('kutipan-penyemangat/', include('kutipan_penyemangat.urls')),
