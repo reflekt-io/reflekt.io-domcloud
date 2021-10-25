@@ -10,12 +10,15 @@
       <div>
         <form method="POST" action="">
           {%csrf_token%}
-          <p>Bagaimana perasaanmu?</p>
+          <p>Perasaan apa saja yang sedang kamu rasakan?</p>
           {{ form.feeling }}
+          <p>Dari mana datangnya perasaan tersebut?</p>
+          {{ form.factor }}
           <p>Seberapa cemaskah kamu?</p>
           {{ form.anxiety_rate }}
           <p>Ayo sini, ceritakan harimu.</p>
           {{ form.summary }}
+          <br>
           <br>
           <div>
             <button><a href="{% url 'journal:index' %}">Kembali</a></button>
