@@ -6,11 +6,9 @@ from .forms import CurhatForm
 # imported login required
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-@login_required(login_url='/admin/login/')
 def index(request):
-    curhat = Curhatan.objects.all().values() 
-    response = {'curhat': curhat}
+    Curhat = Curhatan.objects.all().values() 
+    response = {'Curhat': Curhat}
     return render(request, 'index.html', response)
 
 @login_required(login_url='/admin/login/')
@@ -23,16 +21,17 @@ def add_curhat(request):
     if (form.is_valid() and request.method == 'POST'):
         # save the form data to model
         form.save()
-    
+        # when saved go back to lab-3
+        return HttpResponseRedirect('/')
     
     else:
         form = CurhatForm()
 
     return render(request, 'form.html', {'form': form})
 
-def note_list(request):
-    curhat = Curhatan.objects.all().values()
-    response = {'curhat': curhat}
+def curhat_list(request):
+    Curhat = Curhatan.objects.all().values()
+    response = {'Curhat': Curhat}
     return render(request, 'cards.html', response)
 
 def navbar(request):
