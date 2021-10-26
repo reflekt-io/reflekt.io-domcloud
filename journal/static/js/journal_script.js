@@ -18,52 +18,52 @@ const months = [
 const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
 const FEELINGS = {
-  "antusias": "Antusias",
-  "gembira": "Gembira",
-  "takjub": "Takjub",
-  "semangat": "Semangat",
-  "bangga": "Bangga",
-  "penuh_cinta": "Penuh Cinta",
-  "santai": "Santai",
-  "tenang": "Tenang",
-  "puas": "Puas",
-  "lega": "Lega",
-  "marah": "Marah",
-  "takut": "Takut",
-  "stres": "Stres",
-  "waspada": "Waspada",
-  "kewalahan": "Kewalahan",
-  "kesal": "Kesal",
-  "malu": "Malu",
-  "cemas": "Cemas",
-  "lesu": "Lesu",
-  "sedih": "Sedih",
-  "duka": "Duka",
-  "bosan": "Bosan",
-  "kesepian": "Kesepian",
-  "bingung": "Bingung"
+  antusias: "Antusias",
+  gembira: "Gembira",
+  takjub: "Takjub",
+  semangat: "Semangat",
+  bangga: "Bangga",
+  penuh_cinta: "Penuh Cinta",
+  santai: "Santai",
+  tenang: "Tenang",
+  puas: "Puas",
+  lega: "Lega",
+  marah: "Marah",
+  takut: "Takut",
+  stres: "Stres",
+  waspada: "Waspada",
+  kewalahan: "Kewalahan",
+  kesal: "Kesal",
+  malu: "Malu",
+  cemas: "Cemas",
+  lesu: "Lesu",
+  sedih: "Sedih",
+  duka: "Duka",
+  bosan: "Bosan",
+  kesepian: "Kesepian",
+  bingung: "Bingung",
 };
 
 const FACTORS = {
-    "keluarga": "Keluarga",
-    "pekerjaan": "Pekerjaan",
-    "teman": "Teman",
-    "percintaan": "Percintaan",
-    "kesehatan": "Kesehatan",
-    "pendidikan": "Pendidikan",
-    "tidur": "Tidur",
-    "perjalanan": "Perjalanan",
-    "bersantai": "Bersantai",
-    "makanan": "Makanan",
-    "olahraga": "Olahraga",
-    "seni": "Seni",
-    "hobi": "Hobi",
-    "cuaca": "Cuaca",
-    "belanja": "Belanja",
-    "hiburan": "Hiburan",
-    "keuangan": "Keuangan",
-    "ibadah": "Ibadah",
-    "refleksi_diri": "Refleksi Diri",
+  keluarga: "Keluarga",
+  pekerjaan: "Pekerjaan",
+  teman: "Teman",
+  percintaan: "Percintaan",
+  kesehatan: "Kesehatan",
+  pendidikan: "Pendidikan",
+  tidur: "Tidur",
+  perjalanan: "Perjalanan",
+  bersantai: "Bersantai",
+  makanan: "Makanan",
+  olahraga: "Olahraga",
+  seni: "Seni",
+  hobi: "Hobi",
+  cuaca: "Cuaca",
+  belanja: "Belanja",
+  hiburan: "Hiburan",
+  keuangan: "Keuangan",
+  ibadah: "Ibadah",
+  refleksi_diri: "Refleksi Diri",
 };
 
 function formatDate(dateData) {
@@ -72,9 +72,18 @@ function formatDate(dateData) {
   var monthName = months[dateData.getMonth()];
   var dayName = days[dateData.getDay()];
   var date = dateData.getDate();
-  var hour = dateData.getHours();
-  var minute = dateData.getMinutes();
-  var second = dateData.getSeconds();
+  var hour = dateData.getHours().toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  var minute = dateData.getMinutes().toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
+  var second = dateData.getSeconds().toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  });
   // Make formatted date
   var formattedDate = `${dayName}, ${date} ${monthName} ${year}, pukul ${hour}.${minute}.${second}.`;
   return formattedDate;
