@@ -1,3 +1,6 @@
+<!--  Load static files -->
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +26,12 @@
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -37,7 +40,7 @@
         <div class="container">
             
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  
+            <a class="navbar-brand logo-image" href="{% url 'main:home' %}"><img src="{% static 'images/logo.svg' %}" alt="alternative"></a>  
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
@@ -49,26 +52,26 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#header">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="{% url 'main:home' %}#header">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#about">About</a>
+                        <a class="nav-link page-scroll" href="{% url 'main:home' %}#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#services">Services</a>
+                        <a class="nav-link page-scroll" href="{% url 'main:home' %}#services">Services</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
+                            <a class="dropdown-item page-scroll" href="{% url 'main:project' %}">Project Details</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
+                            <a class="dropdown-item page-scroll" href="{% url 'main:terms' %}">Terms Conditions</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                            <a class="dropdown-item page-scroll" href="{% url 'main:privacy' %}">Privacy Policy</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#contact">Contact</a>
+                        <a class="nav-link page-scroll" href="{% url 'main:home' %}#contact">Contact</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
@@ -196,7 +199,7 @@
                     </div> <!-- end of text-box -->
                     <p class="mb-5">Together with touches of call to action green, the overall landing page design will showcase your app beautifully and will help with convincing visitors to download it from the app stores orange and gray hues with one color backgrounds to maximize the impact of your written and online content.</p>
                     
-                    <a class="btn-solid-reg mb-5" href="index.html">Back</a>
+                    <a class="btn-solid-reg mb-5" href="{% url 'main:home' %}">Back</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -270,9 +273,9 @@
     
     	
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
 </body>
 </html>
