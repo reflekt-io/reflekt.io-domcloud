@@ -4,6 +4,10 @@ from .models import HasilDeteksiDepresi
 from .forms import PHQ9Form
 
 def index(request):
+    result = None
+    hasil_deteksi = None
+    tanggal_deteksi = None
+
     if request.method != 'POST':
         form = PHQ9Form()
     else:
@@ -30,18 +34,14 @@ def index(request):
                     hasil_sebelum.save()
                 else:
                     HasilDeteksiDepresi.objects.create(owner = request.user, result = result)
-                return redirect('deteksi_depresi:index')
-            else:
-                context = {'form': form, 'hasil_deteksi': result, 'tanggal_deteksi': None}
-                return render(request, 'index.html', context)
 
-    hasil_deteksi = None
-    tanggal_deteksi = None
     if request.user.is_authenticated:
         hasil = HasilDeteksiDepresi.objects.filter(owner=request.user).first()
         if hasil:
-            hasil_deteksi = hasil.resultj
+            hasil_deteksi = hasil.result
             tanggal_deteksi = hasil.date_added
+    else:
+        hasil_deteksi = result
 
     context = {'form': form, 'hasil_deteksi': hasil_deteksi, 'tanggal_deteksi': tanggal_deteksi}
     return render(request, 'index.html', context)
