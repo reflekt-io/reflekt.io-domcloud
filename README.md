@@ -30,7 +30,7 @@ Oleh karena itu, kami berinisiatif untuk membuat sebuah aplikasi situs web yang 
 
 Tidak hanya _journaling_, kami menyediakan Pojok Curhat untuk memberikan ruang yang aman untuk membuang rasa lelah tanpa haris diketahui oleh siapapun. Kami juga menyediakan Tembok Harapan sebagai tempat yang aman untuk menggantungkan harapan yang ingin dicapai, baik itu untuk jangka waktu yang pendek atau lama. Kutipan Penyemangat hadir sebagai tempat penyemangat bagi sesama. Para pengguna dapat mengirim penyemangat kepada pengguna lainnya, baik yang memilii akun ataupun tidak.
 
-Kami menyadari bahwa depresi adalah suatu hal yang susah dideteksi, namun semakin banyak dirasakan oleh orang-orang. Oleh karena itu, aplikasi kami menyediakan form deteksi dini depresi baik bagi pengguna publik ataupun pengguna yang telah memiliki akun. Kami menggunakan Patient Health Questionnaire-9 (PHQ-9), kuesioner yang telah dipercayai dapat mendeteksi depresi dalam skala ringan, sedang, ataupun berat.
+Kami menyadari bahwa depresi adalah suatu hal yang susah dideteksi, namun semakin banyak dirasakan oleh orang-orang. Oleh karena itu, aplikasi kami menyediakan form deteksi dini depresi baik bagi pengguna publik ataupun pengguna yang telah memiliki akun. Kami menggunakan Patient Health Questionnaire (PHQ-9), kuesioner yang telah dipercayai dapat mendeteksi depresi dalam skala ringan, sedang, ataupun berat.
 
 Kami berharap aplikasi situs web kami yang kami namakan **reflekt<area>.io** dapat membantu orang-orang untuk menjalani hidup dengan lebih mudah di masa pandemi ini.
 
@@ -66,6 +66,7 @@ Berikut ini adalah sumber referensi yang digunakan dalam pembuatan proyek ini.
 - [Efektivitas Kuesioner PHQ-9 Sebagai Skrining Deteksi Dini Depresi](https://www.alomedika.com/efektivitas-kuesioner-ph-9-sebagai-skrining-deteksi-dini-depresi/)
 - [The Patient Health Questionnaire (PHQ-9) - Overview](https://img3.reoveme.com/m/7dcac06741830f40.pdf)
 - [Relax Color Scheme » Blue » SchemeColor.com](https://www.schemecolor.com/relax-color.php)
+- [Mark – Free Bootstrap 4 HTML5 Personal Portfolio Website Template - ThemeWagon](https://themewagon.com/themes/free-bootstrap-4-html-5-personal-portfolio-website-template-mark/)
 
 [actions-badge]: https://github.com/reflekt-io/reflekt.io/workflows/Test%20and%20Deploy/badge.svg
 [commits-gh]: https://github.com/reflekt-io/reflekt.io/commits/master

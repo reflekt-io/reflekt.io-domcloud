@@ -1,31 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Add Journal</title>
-  </head>
-  <body>
-   <h2>Bagaimana harimu?</h2>
-    <div>
-      <div>
-        <form method="POST" action="">
-          {%csrf_token%}
-          <p>Perasaan apa saja yang sedang kamu rasakan?</p>
-          {{ form.feeling }}
-          <p>Dari mana datangnya perasaan tersebut?</p>
-          {{ form.factor }}
-          <p>Seberapa cemaskah kamu?</p>
-          {{ form.anxiety_rate }}
-          <p>Ayo sini, ceritakan harimu.</p>
-          {{ form.summary }}
-          <br>
-          <br>
-          <div>
-            <button><a href="{% url 'journal:index' %}">Kembali</a></button>
-            <input type="submit" value="Submit"/>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Add Journal - reflekt.io{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Add Journal</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-5 pb-5">
+    <div class="container">
+        <h2>Bagaimana harimu?</h2>
+        <div>
+            <div>
+                <form method="POST" action="">
+                    {%csrf_token%}
+                    <p>Perasaan apa saja yang sedang kamu rasakan?</p>
+                    {{ form.feeling }}
+                    <p>Dari mana datangnya perasaan tersebut?</p>
+                    {{ form.factor }}
+                    <p>Seberapa cemaskah kamu?</p>
+                    {{ form.anxiety_rate }}
+                    <p>Ayo sini, ceritakan harimu.</p>
+                    {{ form.summary }}
+                    <br>
+                    <br>
+                    <div>
+                        <button><a href="{% url 'journal:index' %}">Kembali</a></button>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+{% endblock %}
