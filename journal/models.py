@@ -66,6 +66,6 @@ FACTORS = [('keluarga', 'Keluarga'),
 class Journal(models.Model):
     date = models.DateTimeField(auto_now=True)
     feeling = MultiSelectField(choices=FEELINGS)
+    factor = MultiSelectField(choices=FACTORS, null=True)
     anxiety_rate = models.IntegerField(default=0,choices=ANXIETY_RATE)
     summary = models.TextField()
-    factor = MultiSelectField(choices=FACTORS, null=True)
