@@ -16,13 +16,15 @@ ANXIETY_RATE = [(0, '0'),
                 (8, '8'),
                 (9, '9'),
                 (10, '10')]
+                
 # Reference: https://stackoverflow.com/a/27442810/8487665
+# Model: https://pypi.org/project/django-multiselectfield/
 FEELINGS = [('antusias', 'Antusias'),
             ('gembira', 'Gembira'),
             ('takjub', 'Takjub'),
             ('semangat', 'Semangat'),
             ('bangga', 'Bangga'),
-            ('cinta', 'Penuh Cinta'),
+            ('penuh_cinta', 'Penuh Cinta'),
             ('santai', 'Santai'),
             ('tenang', 'Tenang'),
             ('puas', 'Puas'),
@@ -65,6 +67,6 @@ FACTORS = [('keluarga', 'Keluarga'),
 class Journal(models.Model):
     date = models.DateTimeField(auto_now=True)
     feeling = MultiSelectField(choices=FEELINGS)
+    factor = MultiSelectField(choices=FACTORS, null=True)
     anxiety_rate = models.IntegerField(default=0,choices=ANXIETY_RATE)
     summary = models.TextField()
-    factor = MultiSelectField(choices=FACTORS, null=True)
