@@ -32,26 +32,30 @@
             <div class="col-lg-12">
                 
                 <!-- Form -->
-                <form method="POST" action="">
-                    {%csrf_token%}
+                <form id="journal-form" method="POST" action="">
+                    {% csrf_token %}
                     <p>Perasaan apa saja yang sedang kamu rasakan?</p>
-                    <div class="bulletless-form">
+                    <div class="bulletless-form" id="feeling">
                         {{ form.feeling }}
                     </div>
                     <p>Dari mana datangnya perasaan tersebut?</p>
-                    <div class="bulletless-form">
+                    <div class="bulletless-form" id="factor">
                         {{ form.factor }}
                     </div>
                     <p>Seberapa cemaskah kamu?</p>
-                    {{ form.anxiety_rate }}
+                    <div id="anxiety_rate">
+                        {{ form.anxiety_rate }}
+                    </div>
                     <br>
                     <br>
                     <p>Ayo sini, ceritakan harimu.</p>
-                    {{ form.summary }}
+                    <div id="summary">
+                        {{ form.summary }}
+                    </div>
                     <br>
                     <br>
                     <div>
-                        <input class="btn-solid-lg" type="submit" value="Submit" />
+                        <input class="btn-solid-lg" type="submit" data-toggle="modal" data-target="#success_tic" value="Submit"/>
                         <a class="btn-solid-lg right" href="{% url 'journal:index' %}">Kembali</a>
                     </div>
                 </form>
@@ -66,4 +70,9 @@
 <!-- Modal Success -->
 {% include 'success_modal.html' %}
 <!-- end of modal success -->
+{% endblock %}
+
+{% block script %}
+<!-- Scripts -->
+<script src="{% static 'js/journal_script.js' %}"></script>
 {% endblock %}
