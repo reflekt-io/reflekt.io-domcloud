@@ -44,4 +44,4 @@ def index(request):
         hasil_deteksi = result
 
     context = {'form': form, 'hasil_deteksi': hasil_deteksi, 'tanggal_deteksi': tanggal_deteksi}
-    return render(request, 'index.html', context)
+    return render(request, 'phq9.html', context)
