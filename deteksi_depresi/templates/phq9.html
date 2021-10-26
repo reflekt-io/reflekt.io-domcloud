@@ -22,7 +22,7 @@
     <div class="container">
 
         {% if hasil_deteksi %}
-        <div class="card text-center">
+        <div class="card text-center mb-4">
             <div class="card-header">
                 Hasil Terakhir Deteksi Depresi
             </div>
@@ -32,6 +32,8 @@
             <div class="card-footer text-muted">
                 {% if tanggal_deteksi %}
                 {{ tanggal_deteksi }}
+                {% else %}
+                -
                 {% endif %}
             </div>
         </div>
