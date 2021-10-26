@@ -20,26 +20,42 @@
 <!-- Basic -->
 <div class="ex-basic-1 pt-5 pb-5">
     <div class="container">
-        <table border="1">
-            <tr>
-                <th>Tanggal</th>
-                <th>Perasaan</th>
-                <th>Faktor</th>
-                <th>Tingkat Kecemasan</th>
-                <th>Ringkasan</th>
-            </tr>
-            {% for journal in journals %}
-            <tr>
-                <td>{{ journal.date }}</td>
-                <td>{{ journal.feeling }}</td>
-                <td>{{ journal.factor }}</td>
-                <td>{{ journal.anxiety_rate }}</td>
-                <td>{{ journal.summary }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-        <p>Ada yang ingin diceritakan hari ini?</p>
-        <button><a href="add-journal">New Journal</a></button>
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <table border="1">
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Perasaan</th>
+                        <th>Faktor</th>
+                        <th>Tingkat Kecemasan</th>
+                        <th>Ringkasan</th>
+                    </tr>
+                    {% for journal in journals %}
+                    <tr>
+                        <td>{{ journal.date }}</td>
+                        <td>{{ journal.feeling }}</td>
+                        <td>{{ journal.factor }}</td>
+                        <td>{{ journal.anxiety_rate }}</td>
+                        <td>{{ journal.summary }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+<!-- Basic -->
+<div class="ex-basic-1 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h5>Ada yang ingin diceritakan hari ini?</h5>
+                <br>
+                <a class="btn-solid-lg" href="{% url 'journal:add_journal' %}">New Journal</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
     </div> <!-- end of container -->
 </div> <!-- end of ex-basic-1 -->
 <!-- end of basic -->
