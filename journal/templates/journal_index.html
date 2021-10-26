@@ -23,22 +23,16 @@
         <div class="row">
             <div class="col-xl-10 offset-xl-1">
                 <table class="journal-table">
-                    <tr>
-                        <th>Tanggal</th>
-                        <th>Perasaan</th>
-                        <th>Faktor</th>
-                        <th>Tingkat Kecemasan</th>
-                        <th>Ringkasan</th>
-                    </tr>
-                    {% for journal in journals %}
-                    <tr>
-                        <td>{{ journal.date }}</td>
-                        <td>{{ journal.feeling }}</td>
-                        <td>{{ journal.factor }}</td>
-                        <td>{{ journal.anxiety_rate }}</td>
-                        <td>{{ journal.summary }}</td>
-                    </tr>
-                    {% endfor %}
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Perasaan</th>
+                            <th>Faktor</th>
+                            <th>Tingkat Kecemasan</th>
+                            <th>Ringkasan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="journal-table-body"></tbody> <!-- use ajax to retrieve data -->
                 </table>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -59,4 +53,9 @@
     </div> <!-- end of container -->
 </div> <!-- end of ex-basic-1 -->
 <!-- end of basic -->
+{% endblock %}
+
+{% block script %}
+<!-- Scripts -->
+<script src="{% static 'js/journal_script.js' %}"></script>
 {% endblock %}

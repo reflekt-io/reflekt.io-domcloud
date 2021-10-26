@@ -18,12 +18,13 @@ ANXIETY_RATE = [(0, '0'),
                 (10, '10')]
                 
 # Reference: https://stackoverflow.com/a/27442810/8487665
+# Model: https://pypi.org/project/django-multiselectfield/
 FEELINGS = [('antusias', 'Antusias'),
             ('gembira', 'Gembira'),
             ('takjub', 'Takjub'),
             ('semangat', 'Semangat'),
             ('bangga', 'Bangga'),
-            ('cinta', 'Penuh Cinta'),
+            ('penuh_cinta', 'Penuh Cinta'),
             ('santai', 'Santai'),
             ('tenang', 'Tenang'),
             ('puas', 'Puas'),
