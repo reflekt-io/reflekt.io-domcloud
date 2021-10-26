@@ -26,9 +26,13 @@
                 <form method="POST" action="">
                     {%csrf_token%}
                     <p>Perasaan apa saja yang sedang kamu rasakan?</p>
-                    {{ form.feeling }}
+                    <div class="bulletless-form">
+                        {{ form.feeling }}
+                    </div>
                     <p>Dari mana datangnya perasaan tersebut?</p>
-                    {{ form.factor }}
+                    <div class="bulletless-form">
+                        {{ form.factor }}
+                    </div>
                     <p>Seberapa cemaskah kamu?</p>
                     {{ form.anxiety_rate }}
                     <p>Ayo sini, ceritakan harimu.</p>

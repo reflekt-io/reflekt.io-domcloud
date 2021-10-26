@@ -16,6 +16,7 @@ ANXIETY_RATE = [(0, '0'),
                 (8, '8'),
                 (9, '9'),
                 (10, '10')]
+                
 # Reference: https://stackoverflow.com/a/27442810/8487665
 FEELINGS = [('antusias', 'Antusias'),
             ('gembira', 'Gembira'),
