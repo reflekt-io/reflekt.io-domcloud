@@ -13,6 +13,7 @@ Table Of Contents:
 - Testimonials
 - Questions
 - Contact
+- About Us - Home
 - Footer 
 - Copyright
 - Back To Top Button
@@ -851,6 +852,24 @@ input[type="checkbox"] {
   margin-bottom: 4rem;
 }
 
+/*******************/
+/* About Us - Home */
+/*******************/
+.about-us-home {
+  padding-top: 7.75rem;
+  padding-bottom: 7rem;
+  text-align: center;
+}
+
+.about-us-home .h2-heading {
+  text-align: center;
+}
+
+.about-us-home .p-heading {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /******************/
 /*     Footer     */
 /******************/
@@ -1194,6 +1213,14 @@ td {
     margin-left: auto;
   }
   /* end of contact */
+
+  /* About Us - Home */
+  .about-us-home {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  /* end of about us */
 
   /* Extra Pages */
   .ex-cards-1 .card {
