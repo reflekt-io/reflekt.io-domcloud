@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}PHQ9 - reflekt.io{% endblock %}
+{% block title %}PHQ9{% endblock %}
 
 {% block content %}
 <!-- Header -->
@@ -21,17 +21,17 @@
 <div class="ex-basic-1 pt-5 pb-5">
     <div class="container">
 
-        {% if hasil_deteksi %}
+        {% if hasil_deteksi.result %}
         <div class="card text-center mb-4">
             <div class="card-header">
                 Hasil Terakhir Deteksi Depresi
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{ hasil_deteksi }}</h5>
+                <h5 class="card-title">{{ hasil_deteksi.result }}</h5>
             </div>
             <div class="card-footer text-muted">
-                {% if tanggal_deteksi %}
-                {{ tanggal_deteksi }}
+                {% if hasil_deteksi.owner %}
+                {{ hasil_deteksi.date }}
                 {% else %}
                 -
                 {% endif %}

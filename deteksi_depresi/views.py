@@ -5,8 +5,6 @@ from .forms import PHQ9Form
 
 def index(request):
     result = None
-    hasil_deteksi = None
-    tanggal_deteksi = None
 
     if request.method != 'POST':
         form = PHQ9Form()
@@ -36,12 +34,9 @@ def index(request):
                     HasilDeteksiDepresi.objects.create(owner = request.user, result = result)
 
     if request.user.is_authenticated:
-        hasil = HasilDeteksiDepresi.objects.filter(owner=request.user).first()
-        if hasil:
-            hasil_deteksi = hasil.result
-            tanggal_deteksi = hasil.date_added
+        hasil_deteksi = HasilDeteksiDepresi.objects.filter(owner=request.user).first()
     else:
-        hasil_deteksi = result
+        hasil_deteksi = HasilDeteksiDepresi(result=result)
 
-    context = {'form': form, 'hasil_deteksi': hasil_deteksi, 'tanggal_deteksi': tanggal_deteksi}
+    context = {'form': form, 'hasil_deteksi': hasil_deteksi}
     return render(request, 'phq9.html', context)
