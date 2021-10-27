@@ -275,3 +275,56 @@
 </section>
 
 {% endblock %}
+
+{% block script %}
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script type="text/javascript">
+    $(document).on('submit', '#contact-form', function(e) {
+        e.preventDefault();
+        var form = $("#contact-form");
+
+        $.ajax({
+            url:'',
+            type: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+            header: {'X-CSRFToken': '{% csrf_token %}'},
+            success: function(response) {
+                var success = response['success']
+                if(success){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Terima kasih!',
+                        text: 'Pesan Anda sudah terkirim',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                    })
+
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Upss...',
+                        text: 'Form yang Anda isi tidak valid!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                    })
+                }
+                document.getElementById("contact-form").reset();
+            },
+            failure: function(response) {
+                Swal.fire({
+                        icon: 'error',
+                        title: 'Upss...',
+                        text: 'Terjadi error',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                    })
+            }
+        })
+    })
+</script>
+
+{% endblock script %}
+
