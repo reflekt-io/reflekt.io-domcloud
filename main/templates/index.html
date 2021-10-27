@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header id="header" class="header">
+    <!-- Picture taken from https://unsplash.com/photos/7FOSJVtUtac -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <h1 class="h1-large">A new safe place, tailored for each individual.</h1>
+                    <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
+                    <a class="btn-solid-lg" href="{% url 'main:login' %}">Login</a>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of header -->
+<!-- end of header -->
+
+
+<!-- About-->
+<div id="about" class="basic-1 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-container first">
+                    <h2 class="highlight">Kesehatan mental.</h2>
+                    <p>Kami yakin bahwa hidup semakin tidak mudah dijalani di bawah bayangan pandemi COVID-19 yang tak kunjung reda. Dengan adanya batasan interaksi dan rasa canggung untuk berinteraksi dengan orang lain yang semakin bertambah, rasa frustrasi dan bingung dalam berkeluh kesah semakin ada.</p>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-container second">
+                    <h2 class="highlight">Kata.</h2>
+                    <p>Kata memiliki kekuatan besar yang tidak terduga, baik itu kekuatan yang baik ataupun buruk. Kami yakin bahwa kata dapat meluapkan sebagian besar perasaan yang dialami. Oleh karena itu, kami membangun situs web ini berdasarkan pada kekuatan "kata".</p>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-container third">
+                    <h2 class="highlight">Personal.</h2>
+                    <p>Kami yakin bahwa setiap individu memiliki karakter yang unik. Kami juga sangat menghargai privasi pribadi dari setiap orang. Oleh karena itu, kami berusaha semaksimal mungkin untuk merancang situs web ini dengan sifat yang dapat merangkul setiap individu dengan keunikannya masing-masing.</p>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-1 -->
+<!-- end of about -->
+
+
+<!-- Services -->
+<div id="services" class="basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="h2-heading">Fitur</h2>
+                <p class="p-heading">Berikut adalah fitur-fitur yang kami tawarkan melalui situs web ini.</p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-pencil-alt-1"></i>
+                    <h4>JOURNALING</h4>
+                    <p>A private place for users to express their thoughts and emotions throughout the day.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-aim"></i>
+                    <h4>IDE KEGIATAN</h4>
+                    <p>Activity recommendations based on users' journaling results to improve their mental health.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-ui-text-chat"></i>
+                    <h4>POJOK CURHAT</h4>
+                    <p>A private place for users to confide all of the thoughts and emotions that are haunting them.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-paper-plane"></i>
+                    <h4>TEMBOK HARAPAN</h4>
+                    <p>A private place for users to write down all the wishes that they want to achieve.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-quote-left"></i>
+                    <h4>KUTIPAN PENYEMANGAT</h4>
+                    <p>A place for users to submit their inspirational quotes, which will be published publicly.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-search-2"></i>
+                    <h4>DETEKSI DINI DEPRESI</h4>
+                    <p>A tool that helps users to find out if they are currently suffering from depression or not.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-2 -->
+<!-- end of services -->
+
+
+<!-- Details -->
+<div class="split">
+    <div class="area-1">
+        <!-- Picture taken from https://unsplash.com/photos/lcfZmDhQP5g -->
+    </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
+        <div class="container">    
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Text Container -->
+                    <div class="text-container">
+                        <h2>Harapan</h2>
+                        <p>Kami berharap situs web ini dapat membantu orang-orang untuk menjalani hidup dengan lebih mudah di masa pandemi.</p>
+                        <h5>LEGA</h5>
+                        <p>Dengan adanya fitur-fitur yang dapat menyalurkan perasaan setiap individu, kami berharap pengguna situs web ini dapat memberikan rasa nyaman, aman, lega, dan bahagia.</p>
+                        <h5>PERCAYA DIRI</h5>
+                        <p>Dengan adanya fitur-fitur yang dapat membantu interaksi antar manusia, kami berharap situs web ini dapat mengurangi rasa canggung saat berinteraksi.</p>
+                        <h5>POSITIF</h5>
+                        <p>Dengan adanya fitur ide kegiatan, kami berharap situs web ini bermanfaat bagi para pengguna dalam menciptakan perasaan yang positif dengan melakukan ide kegiatan yang direkomendasikan.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of area-2 -->
+</div> <!-- end of split -->
+<!-- end of details -->
+
+
+<!-- Questions -->
+<div class="accordion-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="h2-heading">Frequently Asked Questions (FAQ)</h2>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Apakah saya perlu membuat akun untuk menggunakan situs web ini?
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anda tidak memerlukan akun untuk melakukan deteksi dini depresi, melihat kutipan penyemangat, serta melihat detail aplikasi dan memberikan saran kepada pengembang aplikasi melalui About Us.
+                                Namun, akun pengguna diperlukan untuk menikmati seluruh fitur yang disediakan oleh situs web ini.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Dimana saya dapat membuat akun?
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Akun dapat dibuat melalui tautan <a href="{% url 'main:login' %}">ini</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Apakah keamanan pengguna dijamin aman dan personal?
+                            </button>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Ya, keamanan pengguna dijamin aman dan personal.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Tipe kuesioner apa yang digunakan pada deteksi dini depresi?
+                            </button>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Kami menggunakan kuesioner Patient Health Questionnaire (PHQ-9) untuk modul deteksi dini depresi.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Apakah saya dapat memberikan kritik dan saran untuk pengembang?
+                            </button>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Ya, Anda dapat memberikan kritik dan saran kepada kami melalui tautan <a href="{% url 'about_us:index' %}">ini</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end of accordion -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of accordion-1 -->
+<!-- end of questions -->
+
+
+<!-- About Us -->
+<div id="about-us" class="about-us-home bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="h2-heading">About Us</h2>
+                <p class="p-heading">Untuk mengetahui situs web ini lebih dalam, klik tombol di bawah ini untuk informasi selengkapnya.</p>
+                <a class="btn-solid-lg page-scroll" href="{% url 'about_us:index' %}">About Us</a>  
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of form-1 -->  
+<!-- end of contact -->
+{% endblock %}
