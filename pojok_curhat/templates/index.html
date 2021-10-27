@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load static %}
+
+{% block title %}Pojok Curhat - reflekt.io{% endblock %}
+
+{% block content %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +38,7 @@
         <th>Title</th>
         <th>Message</th>
       </tr>
-      <!-- TODO loop from Friend model -->
+      <!-- TODO loop from Curhat model -->
       <!-- EXAMPLE SECTION -->
       {% if Curhat %}
         {% for curhatan in Curhat %}
@@ -48,5 +52,5 @@
       <!-- END SECTION -->
     </table>
     </div>
-  </body>
-</html>
+    <!-- end of basic -->
+{% endblock %}
