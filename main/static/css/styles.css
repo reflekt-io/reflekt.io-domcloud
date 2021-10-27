@@ -8,9 +8,6 @@ Table Of Contents:
 - About
 - Services
 - Details
-- Projects
-- Works
-- Testimonials
 - Questions
 - Contact
 - About Us - Home
@@ -579,6 +576,12 @@ input[type="checkbox"] {
   font-family: "Poppins";
 }
 
+.basic-1 .highlight {
+  color: #0b36a8;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
 .basic-1 h6 {
   margin-bottom: 0.125rem;
 }
@@ -618,6 +621,13 @@ input[type="checkbox"] {
   letter-spacing: 1px;
 }
 
+.feature-block-item i {
+  font-size: 50px;
+  margin-bottom: 15px;
+  display: inline-block;
+  color: #0b36a8;
+}
+
 /*******************/
 /*     Details     */
 /*******************/
@@ -633,8 +643,8 @@ input[type="checkbox"] {
 }
 
 .split .area-2 {
-  padding-top: 7.75rem;
-  padding-bottom: 7.75rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
 }
 
 .split p {
@@ -649,133 +659,6 @@ input[type="checkbox"] {
   width: 50px;
   margin-right: 0.625rem;
   margin-bottom: 0.75rem;
-}
-
-/********************/
-/*     Projects     */
-/********************/
-.basic-3 {
-  padding-top: 7.75rem;
-  padding-bottom: 1rem;
-}
-
-.basic-3 .h2-heading {
-  margin-bottom: 0.75rem;
-  text-align: center;
-}
-
-.basic-3 .p-heading {
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.basic-3 .text-container {
-  margin-bottom: 4rem;
-}
-
-.basic-3 .image-container {
-  margin-bottom: 1rem;
-}
-
-/* Hover Animation */
-.basic-3 .image-container {
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.basic-3 .image-container img {
-  margin: 0;
-  transition: all 0.2s;
-}
-
-.basic-3 .image-container:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-/* end of hover animation */
-
-/*****************/
-/*     Works     */
-/*****************/
-.basic-4 {
-  padding-bottom: 1rem;
-}
-
-.basic-4 .text-container {
-  margin-bottom: 4rem;
-}
-
-.basic-4 .image-container {
-  margin-bottom: 1rem;
-}
-
-/* Hover Animation */
-.basic-4 .image-container {
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.basic-4 .image-container img {
-  margin: 0;
-  transition: all 0.2s;
-}
-
-.basic-4 .image-container:hover img {
-  -moz-transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
-}
-/* end of hover animation */
-
-/************************/
-/*     Testimonials     */
-/************************/
-.cards-1 {
-  padding-top: 3rem;
-  padding-bottom: 3.875rem;
-}
-
-.cards-1 .h2-heading {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.cards-1 .card {
-  margin-bottom: 4rem;
-  border: none;
-}
-
-.cards-1 .card-body {
-  padding: 0;
-  text-align: center;
-}
-
-.cards-1 .testimonial-text {
-  margin-bottom: 1.625rem;
-}
-
-.cards-1 img {
-  display: inline-block;
-  width: 60px;
-  margin-bottom: 0.875rem;
-  border-radius: 50%;
-}
-
-.cards-1 .text {
-  margin-top: 0.375rem;
-}
-
-.cards-1 .testimonial-author {
-  color: #24262a;
-}
-
-.cards-1 .testimonial-author,
-.cards-1 .occupation {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
 }
 
 /*********************/

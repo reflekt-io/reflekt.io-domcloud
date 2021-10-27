@@ -7,13 +7,14 @@
 {% block content %}
 <!-- Header -->
 <header id="header" class="header">
+    <!-- Picture taken from https://unsplash.com/photos/7FOSJVtUtac -->
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h1 class="h1-large">I love to create beautiful and efficient websites</h1>
+                    <h1 class="h1-large">A new safe place, tailored for each individual.</h1>
                     <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
-                    <a class="btn-outline-lg page-scroll" href="#about-us"><i class="fas fa-users"></i>About Us</a>
+                    <a class="btn-solid-lg" href="{% url 'main:login' %}">Login</a>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -28,28 +29,20 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="text-container first">
-                    <h2>Hi there I'm Mark,</h2>
-                    <p>And I love to create beautiful and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch</p>
+                    <h2 class="highlight">Kesehatan mental.</h2>
+                    <p>Kami yakin bahwa hidup semakin tidak mudah dijalani di bawah bayangan pandemi COVID-19 yang tak kunjung reda. Dengan adanya batasan interaksi dan rasa canggung untuk berinteraksi dengan orang lain yang semakin bertambah, rasa frustrasi dan bingung dalam berkeluh kesah semakin ada.</p>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
             <div class="col-lg-4">
                 <div class="text-container second">
-                    <div class="time">2019 - PRESENT</div>
-                    <h6>Freelance Web Developer</h6>
-                    <p>Working happily on my own web projects</p>
-                    <div class="time">2018 - 2019</div>
-                    <h6>Lead Web Developer</h6>
-                    <p>Beautiful project for a major digital agency</p>
+                    <h2 class="highlight">Kata.</h2>
+                    <p>Kata memiliki kekuatan besar yang tidak terduga, baik itu kekuatan yang baik ataupun buruk. Kami yakin bahwa kata dapat meluapkan sebagian besar perasaan yang dialami. Oleh karena itu, kami membangun situs web ini berdasarkan pada kekuatan "kata".</p>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
             <div class="col-lg-4">
                 <div class="text-container third">
-                    <div class="time">2017 - 2018</div>
-                    <h6>Senior Web Designer</h6>
-                    <p>Inhouse web designer for ecommerce firm</p>
-                    <div class="time">2016 - 2017</div>
-                    <h6>Junior Web Designer</h6>
-                    <p>Junior web designer for small web agency</p>
+                    <h2 class="highlight">Personal.</h2>
+                    <p>Kami yakin bahwa setiap individu memiliki karakter yang unik. Kami juga sangat menghargai privasi pribadi dari setiap orang. Oleh karena itu, kami berusaha semaksimal mungkin untuk merancang situs web ini dengan sifat yang dapat merangkul setiap individu dengan keunikannya masing-masing.</p>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -63,30 +56,53 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading">Offered services</h2>
-                <p class="p-heading">Web design and development have been my bread and butter for more than 5 years. During that time I've discovered that I can help startups and companies with the following services</p>
+                <h2 class="h2-heading">Fitur</h2>
+                <p class="p-heading">Berikut adalah fitur-fitur yang kami tawarkan melalui situs web ini.</p>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-4">
-                <div class="text-box">
-                    <i class="far fa-gem"></i>
-                    <h4>DESIGN</h4>
-                    <p>Successful online projects start with good design. It establishes a solid foundation for future development and allows for long term growth</p>
+                <div class="text-box feature-block-item">
+                    <i class="icofont-pencil-alt-1"></i>
+                    <h4>JOURNALING</h4>
+                    <p>Tempat pribadi bagi pengguna untuk mencurahkan pikiran dan emosi yang mereka rasakan di sepanjang hari.</p>
                 </div> <!-- end of text-box -->
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <div class="text-box">
-                    <i class="fas fa-code"></i>
-                    <h4>DEVELOPMENT</h4>
-                    <p>I can code my own designs or even use the customer's design as base. My focus is to generate clean code that's well structured for reliability</p>
+                <div class="text-box feature-block-item">
+                    <i class="icofont-aim"></i>
+                    <h4>IDE KEGIATAN</h4>
+                    <p>Berisi rekomendasi aktivitas untuk meningkatkan ataupun menjaga kesehatan mental berdasarkan hasil penjurnalan pengguna.</p>
                 </div> <!-- end of text-box -->
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <div class="text-box">
-                    <i class="fas fa-tv"></i>
-                    <h4>BASIC SEO</h4>
-                    <p>i can setup your project to use basic SEO principles which will push your project to the first page on search engines and save you ads money</p>
+                <div class="text-box feature-block-item">
+                    <i class="icofont-ui-text-chat"></i>
+                    <h4>POJOK CURHAT</h4>
+                    <p>Tempat pribadi bagi pengguna untuk mencurahkan semua pikiran dan emosi yang sedang menghantui mereka.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-paper-plane"></i>
+                    <h4>TEMBOK HARAPAN</h4>
+                    <p>Tempat pribadi bagi pengguna untuk menuliskan semua keinginan yang ingin mereka capai.</p><br>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-search-2"></i>
+                    <h4>DETEKSI DINI DEPRESI</h4>
+                    <p>Alat yang membantu pengguna untuk mengetahui apakah mereka sedang mengalami depresi atau tidak.</p>
+                </div> <!-- end of text-box -->
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <div class="text-box feature-block-item">
+                    <i class="icofont-quote-left"></i>
+                    <h4>KUTIPAN PENYEMANGAT</h4>
+                    <p>Tempat bagi pengguna untuk mengirimkan kutipan penyemangat yang nantinya akan dipublikasikan ke publik.</p>
                 </div> <!-- end of text-box -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -98,31 +114,22 @@
 <!-- Details -->
 <div class="split">
     <div class="area-1">
+        <!-- Picture taken from https://unsplash.com/photos/lcfZmDhQP5g -->
     </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
         <div class="container">    
             <div class="row">
-                <div class="col-lg-12">     
-                    
+                <div class="col-lg-12">
                     <!-- Text Container -->
                     <div class="text-container">
-                        <h2>Why Work With Me</h2>
-                        <p>I am a great communicator and love to invest the necessary time to understand the customer's problem very well</p>
-                        <h5>DESIGN TOOLS</h5>
-                        <p>My favorite design tools are Photoshop and Illustrator but I can create designs in Figma, Sketch and Adobe XD too</p>
-                        <h5>DEVELOPMENT SKILLS</h5>
-                        <p>I am familiar and work on a daily basis with HTML, CSS, JavaScript, Bootstrap and other modern frameworks</p>
-                        
-                        <div class="icons-container">
-                            <img src="{% static 'images/details-icon-photoshop.png' %}" alt="alternative">
-                            <img src="{% static 'images/details-icon-illustrator.png' %}" alt="alternative">
-                            <img src="{% static 'images/details-icon-html.png' %}" alt="alternative">
-                            <img src="{% static 'images/details-icon-css.png' %}" alt="alternative">
-                            <img src="{% static 'images/details-icon-bootstrap.png' %}" alt="alternative">
-                            <img src="{% static 'images/details-icon-javascript.png' %}" alt="alternative">
-                        </div> <!-- end of icons-container -->
+                        <h2>Harapan</h2>
+                        <p>Kami berharap situs web ini dapat membantu orang-orang untuk menjalani hidup dengan lebih mudah di masa pandemi.</p>
+                        <h5>LEGA</h5>
+                        <p>Dengan adanya fitur-fitur yang dapat menyalurkan perasaan setiap individu, kami berharap pengguna situs web ini dapat memberikan rasa nyaman, aman, lega, dan bahagia.</p>
+                        <h5>PERCAYA DIRI</h5>
+                        <p>Dengan adanya fitur-fitur yang dapat membantu interaksi antar manusia, kami berharap situs web ini dapat mengurangi rasa canggung saat berinteraksi.</p>
+                        <h5>POSITIF</h5>
+                        <p>Dengan adanya fitur ide kegiatan, kami berharap situs web ini bermanfaat bagi para pengguna dalam menciptakan perasaan yang positif dengan melakukan ide kegiatan yang direkomendasikan.</p>
                     </div> <!-- end of text-container -->
-                    <!-- end of text container -->
-
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -131,208 +138,12 @@
 <!-- end of details -->
 
 
-<!-- Projects -->
-<div id="projects" class="basic-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="h2-heading">Delivered projects</h2>
-                <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web development for online shops</p>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/project-1.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Jumbotron, <strong>Project:</strong> web design for their corporate websites and landing pages for marketing campaigns <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/project-2.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Carsrepo, <strong>Project:</strong> designed and developed modern platform for purchasing second hand cars online <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/project-3.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Truevideo, <strong>Project:</strong> created a custom video editing and upload web app for this awesome team <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/project-4.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Evolosim, <strong>Project:</strong> complete redesign of their corporate website and platform update for their online shop <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-3 -->
-<!-- end of projects -->
-
-
-<!-- Works -->
-<div class="basic-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-1.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Zigoland, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-2.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Visodream, <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-3.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Primoday, <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-4.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Nextlite, <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-5.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Syncnow, <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <div class="text-container">
-                    <div class="image-container">
-                        <a href="project.html">
-                            <img class="img-fluid" src="{% static 'images/work-6.jpg' %}" alt="alternative">
-                        </a>
-                    </div> <!-- end of image-container -->
-                    <p><strong>For:</strong> Shifter, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-4 -->
-<!-- end of works -->
-
-
-<!-- Testimonials -->
-<div class="cards-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="h2-heading">A few words from people that chose to work with me</h2>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-        <div class="row">
-            <div class="col-lg-12">
-                
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <p class="testimonial-text">“Mark is a skilled developer which will do everything possible to deliver the project on time and I really appreciate that”</p>
-                        <div class="details">
-                            <img src="{% static 'images/testimonial-1.jpg' %}" alt="alternative">
-                            <div class="text">
-                                <div class="testimonial-author">Samantha Bloom</div>
-                                <div class="occupation">Team Leader - Syncnow</div>
-                            </div> <!-- end of text -->
-                        </div> <!-- end of testimonial-details -->
-                    </div>
-                </div>
-                <!-- end of card -->
-
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <p class="testimonial-text">“Loved to work with Mark he's such an awesome developer with great attention to details. He also has a great eye for design”</p>
-                        <div class="details">
-                            <img src="{% static 'images/testimonial-2.jpg' %}" alt="alternative">
-                            <div class="text">
-                                <div class="testimonial-author">John Rowling</div>
-                                <div class="occupation">Marketing Manager - Nexlite</div>
-                            </div> <!-- end of text -->
-                        </div> <!-- end of testimonial-details -->
-                    </div>
-                </div>
-                <!-- end of card -->
-
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <p class="testimonial-text">“So glad we started working with Mark. We've used many times his design and development skills for our inhouse online projects”</p>
-                        <div class="details">
-                            <img src="{% static 'images/testimonial-3.jpg' %}" alt="alternative">
-                            <div class="text">
-                                <div class="testimonial-author">Lana Smith</div>
-                                <div class="occupation">General Manager - Shifter</div>
-                            </div> <!-- end of text -->
-                        </div> <!-- end of testimonial-details -->
-                    </div>
-                </div>
-                <!-- end of card -->
-
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of cards-1 -->
-<!-- end of testimonials -->
-
-
-<!-- Section Divider -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <hr class="section-divider">
-        </div> <!-- end of col -->
-    </div> <!-- end of row -->
-</div> <!-- end of container -->
-<!-- end of section divider -->
-
-
 <!-- Questions -->
 <div class="accordion-1">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading">Frequent questions</h2>
+                <h2 class="h2-heading">Frequently Asked Questions (FAQ)</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
@@ -342,60 +153,61 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                How can I contact you and quickly get a quote for my online project?
+                                Apakah saya perlu membuat akun untuk menggunakan situs web ini?
                             </button>
                         </div>
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                Anda tidak memerlukan akun untuk melakukan deteksi dini depresi, melihat kutipan penyemangat, serta melihat detail aplikasi dan memberikan saran kepada pengembang aplikasi melalui About Us.
+                                Namun, akun pengguna diperlukan untuk menikmati seluruh fitur yang disediakan oleh situs web ini.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Do you create designs from the ground up or you are using themes?
+                                Dimana saya dapat membuat akun?
                             </button>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
-                                The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                Akun dapat dibuat melalui tautan <a href="{% url 'main:login' %}">ini</a>.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Will I receive any included maintenance or warranty after project delivery?
+                                Apakah keamanan pengguna dijamin aman dan personal?
                             </button>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
-                                The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                Ya, keamanan pengguna dijamin aman dan personal.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                If something goes wrong with the project can I have my money back?
+                                Tipe kuesioner apa yang digunakan pada deteksi dini depresi?
                             </button>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
-                                The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                Kami menggunakan kuesioner Patient Health Questionnaire (PHQ-9) untuk modul deteksi dini depresi.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" id="headingFive">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                What's your preferred method of payment and do you need an advance?
+                                Apakah saya dapat memberikan kritik dan saran untuk pengembang?
                             </button>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                             <div class="card-body">
-                                The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+                                Ya, Anda dapat memberikan kritik dan saran kepada kami melalui tautan <a href="{% url 'about_us:index' %}">ini</a>.
                             </div>
                         </div>
                     </div>
@@ -414,7 +226,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="h2-heading">About Us</h2>
-                <p class="p-heading">Untuk mengetahui proyek ini lebih dalam, klik tombol di bawah ini untuk info selengkapnya.</p>
+                <p class="p-heading">Untuk mengetahui situs web ini lebih dalam, klik tombol di bawah ini untuk informasi selengkapnya.</p>
                 <a class="btn-solid-lg page-scroll" href="{% url 'about_us:index' %}">About Us</a>  
             </div> <!-- end of col -->
         </div> <!-- end of row -->

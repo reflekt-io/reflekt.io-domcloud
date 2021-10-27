@@ -22,18 +22,22 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-10 offset-xl-1">
-                <table class="journal-table">
-                    <thead>
-                        <tr>
-                            <th>Tanggal</th>
-                            <th>Perasaan</th>
-                            <th>Faktor</th>
-                            <th>Tingkat Kecemasan</th>
-                            <th>Ringkasan</th>
-                        </tr>
-                    </thead>
-                    <tbody id="journal-table-body"></tbody> <!-- use ajax to retrieve data -->
-                </table>
+                {% if journals %}
+                    <table class="journal-table">
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Perasaan</th>
+                                <th>Faktor</th>
+                                <th>Tingkat Kecemasan</th>
+                                <th>Ringkasan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="journal-table-body"></tbody> <!-- use ajax to retrieve data -->
+                    </table>
+                {% else %}
+                    <h3>Sepertinya, Anda belum pernah membuat jurnal.</h3>
+                {% endif %}
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->

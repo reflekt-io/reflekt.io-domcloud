@@ -1,17 +1,14 @@
 from django.http.response import HttpResponse
-from django.core import serializers
-from django.shortcuts import render, redirect
-from .models import Quotes
-from .forms import QuotesForm
 from django.contrib.auth.decorators import login_required
-
+from django.shortcuts import render,redirect
+from kutipan_penyemangat.models import Quotes
+from kutipan_penyemangat.forms import QuotesForm
+from django.core import serializers
+# Create your views here.
 def index(request):
-    quotes = Quotes.objects.all() 
+    quotes = Quotes.objects.all() # TODO Implement this
     response = {'quotes': quotes}
     return render(request, 'kutipan_penyemangat_index.html', response)
-def json(request):
-    data = serializers.serialize('json', Quotes.objects.all())
-    return HttpResponse(data, content_type="application/json")
 
 @login_required(login_url='/admin/login/')
 def add_quotes(request):
@@ -19,9 +16,13 @@ def add_quotes(request):
         form = QuotesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect('index-kutipan-penyemangat')
     else:
         form = QuotesForm()
         response = {'form': form}
         return render(request, 'kutipan_penyemangat_form.html', response) 
 
+@login_required(login_url='/admin/login/')
+def json_kutipan_penyemangat(request):
+    data = serializers.serialize('json', Quotes.objects.all())
+    return HttpResponse(data, content_type="application/json")
