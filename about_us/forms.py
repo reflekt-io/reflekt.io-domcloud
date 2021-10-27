@@ -11,5 +11,5 @@ class ContactForm(forms.ModelForm):
             'query_topic': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Topik pesan Anda', 'required': 'true'}),
             'phone_number': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nomor telepon Anda', 'required': 'true'}),
             'email': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Alamat surel Anda', 'required': 'true'}),
-            'message': forms.Textarea(attrs={'class':'form-control', 'placeholder':'Tuliskan pesan Anda', 'required': 'true'}),
+            'message': forms.Textarea(attrs={'class':'form-control', 'placeholder':'Tuliskan pesan Anda', 'required': 'true', 'spellcheck':'false'}),
         }
