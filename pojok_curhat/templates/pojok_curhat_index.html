@@ -5,34 +5,28 @@
 {% block title %}Pojok Curhat - reflekt.io{% endblock %}
 
 {% block content %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pojok Curhat</title>
 
-    <link rel="stylesheet" href="{% static 'css/table.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/button.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar");
-    });
-    </script>
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Tambahkan Curhatanmu <a href="/pojok-curhat/add-curhat" class="add-curhat">Disini.</a></h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
 
-</head>
 
-  <body>
 
   <div id="nav-placeholder"></div>
 
 
-  <div class="btn-container">
-    <a href="/pojok-curhat/add-curhat" class="button">Curhat Disini</a>
-  </div>
 
     <div class = "curhat-container">
     <table id = "curhat">
+    {% if Curhat %}
       <tr>
         <th>From</th>
         <th>Title</th>
@@ -40,7 +34,7 @@
       </tr>
       <!-- TODO loop from Curhat model -->
       <!-- EXAMPLE SECTION -->
-      {% if Curhat %}
+      
         {% for curhatan in Curhat %}
         <tr>
             <td>{{ curhatan.fromCurhat }}</td>
@@ -48,6 +42,8 @@
             <td>{{ curhatan.message }}</td>
         </tr>
         {% endfor %}
+        {% else %}
+          <h3>Sepertinya, Anda belum pernah curhat disini</h3>
       {% endif %}
       <!-- END SECTION -->
     </table>
