@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     Curhat = Curhatan.objects.all().values() 
     response = {'Curhat': Curhat}
-    return render(request, 'index.html', response)
+    return render(request, 'pojok_curhat_index.html', response)
 
 @login_required(login_url='/admin/login/')
 def add_curhat(request):
@@ -28,14 +28,14 @@ def add_curhat(request):
     else:
         form = CurhatForm()
 
-    return render(request, 'form.html', {'form': form})
+    return render(request, 'pojok_curhat_form.html', {'form': form})
 
 @login_required(login_url='/admin/login/')
 def curhat_list(request):
     Curhat = Curhatan.objects.all().values()
     response = {'Curhat': Curhat}
-    return render(request, 'cards.html', response)
+    return render(request, 'pojok_curhat_cards.html', response)
 
 
 def navbar(request):
-    return render(request, 'navbar.html')
+    return render(request, 'pojok_curhat_navbar.html')

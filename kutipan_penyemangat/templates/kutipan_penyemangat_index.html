@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Kutipan Penyemangat Index</title>
+  <style>
+    h1 {
+      font-family: "Raleway", sans-serif;
+      margin-top: 40px;
+      font-weight: 1000;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #151320;
+      height: 100vh;
+      font-family: system-ui, -apple-system, system-ui, ".SFNSText-Regular", sans-serif;
+      display: grid;
+      place-items: center center;
+      color: #fff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 40px;
+      grid-gap: 80px;
+    }
+
+    .card {
+      background-color: #1c1b29;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .cards .card .container img {
+      height: 500px;
+      width: 100%;
+      display: block;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .container::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 20px 20px 0 0;
+      opacity: 0.6;
+    }
+
+    .field {
+      padding: 20px 10px;
+    }
+
+    .field h3 {
+      font-size: 24px;
+      margin: 10px 0 15px 0;
+    }
+
+    .field p {
+      color: #a0a0a0;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .btn1 {
+      background-image: linear-gradient(135deg, #48c6ef, #6f86d6);
+    }
+
+    .btn2 {
+      background-image: linear-gradient(135deg, #2bdce3, #42ffdb);
+    }
+
+    .btn3 {
+      background-image: linear-gradient(135deg, #ff758c, #ff7eb3);
+    }
+
+    button {
+      position: relative;
+      height: 60px;
+      width: 400px;
+      border: none;
+      outline: none;
+      color: white;
+      background: #111;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 18px;
+      font-family: 'Raleway', sans-serif;
+      margin-top: 10px;
+    }
+
+    button:before {
+      position: absolute;
+      content: '';
+      top: -2px;
+      left: -2px;
+      height: calc(100% + 4px);
+      width: calc(100% + 4px);
+      border-radius: 5px;
+      z-index: -1;
+      opacity: 0;
+      filter: blur(5px);
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      background-size: 400%;
+      transition: opacity .3s ease-in-out;
+      animation: animate 20s linear infinite;
+    }
+
+    button:hover:before {
+      opacity: 1;
+    }
+
+    button:hover:active {
+      background: none;
+    }
+
+    button:hover:active:before {
+      filter: blur(2px);
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .add-form-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+
+    .add-form-section>p {
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--main-red);
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;">List Kutipan Penyemangat Untukmu</h1>
+  <div class="cards">
+    <div class="card card1">
+      <div class="container">
+        <img
+          src="https://drscdn.500px.org/photo/1039027272/m%3D900/v2?sig=24175111b40269dfa5309e7256474a35ee59c9992c30328cd583039a7cfcff97"
+          alt="Photo 1">
+      </div>
+      <div class="field">
+        <h3>David Mitchell</h3>
+        <strong>Comedian/Actor</strong>
+        <br>
+        <br>
+        <p>"You say you're 'depressed' - all I see is resilience. You are allowed to feel messed up and inside out. It
+          doesn't mean you're defective - it just mean you're human."</p>
+      </div>
+    </div>
+
+    <div class="card card2">
+      <div class="container">
+        <img src="https://media.albayan.ae/images/fahmi559/3292821.jpg" alt="Photo 2">
+      </div>
+      <div class="field">
+        <h3>Vince Lombardi</h3>
+        <strong>American Football Coach</strong>
+        <br>
+        <br>
+        <p>"It's not whether you get knocked down, it's whether you get up."</p>
+      </div>
+    </div>
+
+    <div class="card card3">
+      <div class="container">
+        <img
+          src="https://drscdn.500px.org/photo/1039027267/m%3D900/v2?sig=5e3f2d3e22f78e29684632bfb0ce527c67dfac0137d426313a4211d8841383d1"
+          alt="Photo 3">
+      </div>
+      <div class="field">
+        <h3>Austin Butler</h3>
+        <strong>Actor</strong>
+        <br>
+        <br>
+        <p>"Depression and anxiety can't fit in your head if you're cultivating feelings of joy and inspiration."</p>
+      </div>
+    </div>
+
+    <div class="card card1">
+      <div class="container">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/598b877ecd0f686e4517c721/1507101376859-9G61ZG3TXWFJM8NE38O4/JFitch_Home_0136_RT-2000x1311.jpg?format=1000w"
+          alt="Photo 4">
+      </div>
+      <div class="field">
+        <h3>Janet Fitch</h3>
+        <strong>Author</strong>
+        <br>
+        <br>
+        <p>"Depression, suffering, and anger are all part of being human."</p>
+      </div>
+    </div>
+
+    <div class="card card2">
+      <div class="container">
+        <img
+          src="https://drscdn.500px.org/photo/1039027258/m%3D900/v2?sig=9d9a9f059398f5b6825b24dc440ff8e8bc39ba78487d01c65213836b824d2324"
+          alt="Photo 5">
+      </div>
+      <div class="field">
+        <h3>Albert Ellis</h3>
+        <strong>Psychologist</strong>
+        <br>
+        <br>
+        <p>"You largely constructed your depression. It wasn't given to you. Therefore, you can deconstruct it."</p>
+      </div>
+    </div>
+
+    <div class="card card3">
+      <div class="container">
+        <img
+          src="https://drscdn.500px.org/photo/1039027263/m%3D900/v2?sig=9e545b0fbe32e3fa31cdd06a16b6ede6d4eee2ccc02e15481d0214036ba78d0f"
+          alt="Photo 6">
+      </div>
+      <div class="field">
+        <h3>Arnold Bennett</h3>
+        <strong>Author</strong>
+        <br>
+        <br>
+        <p> "The best cure for worry, depression, melancholy, brooding, is to go deliberately forth and try to lift with
+          one's sympathy the gloom of some
+          else."</p>
+      </div>
+    </div>
+
+    <div class="card card1">
+      <div class="container">
+        <img src="https://i.pinimg.com/originals/c3/d0/94/c3d094bfea8741bffeb988f3bf6d7a91.jpg" alt="Photo 7">
+      </div>
+      <div class="field">
+        <h3>Kobe Bryant</h3>
+        <strong>NBA Player</strong>
+        <br>
+        <br>
+        <p>"Everything negative - pressure, challenges - is all an opportunity for me to rise."</p>
+      </div>
+    </div>
+
+    <div class="card card2">
+      <div class="container">
+        <img
+          src="https://cdn0-production-images-kly.akamaized.net/pldpV3vx7VHhtdr4hQyPVIj0GgE=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3343998/original/071965700_1610103594-Helen_KellerA.jpg"
+          alt="Photo 8">
+      </div>
+      <div class="field">
+        <h3>Helen Keller</h3>
+        <strong>Author/Educator</strong>
+        <br>
+        <br>
+        <p>"Although the world is full of suffering, it is also full of the overcoming of it."</p>
+      </div>
+    </div>
+
+    <div class="card card3">
+      <div class="container">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Francesco_Hayez_001.jpg/1200px-Francesco_Hayez_001.jpg"
+          alt="Photo 9">
+      </div>
+      <div class="field">
+        <h3>Aristotle</h3>
+        <strong>Philosopher</strong>
+        <br>
+        <br>
+        <p>"It is during our darkest moments that we must focus to see the light."</p>
+      </div>
+    </div>
+    
+    {% for i in quotes %}
+    <div class="card card1">
+      <div class="container">
+        <div class="field">
+          <h3>{{i.name}}</h3>
+          <p>{{i.quotes_form}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <section id="add-form-section" class="add-form-section">
+    <h1>Yuk, tambahin lagi Kutipan Penyemangat ini.</h1>
+  </section>
+  <button><a href="./add-quotes">Tambahkan Kutipanmu Di Sini</a></button>
+</body>

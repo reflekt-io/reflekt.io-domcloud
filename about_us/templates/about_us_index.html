@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}About Us - reflekt.io{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'icofont/icofont.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+
+<section class="page-title bg-about" id="about">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <h1 class="text-capitalize mb-5" style="color: #fff;font-size: 3.75rem;">About Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h2 class="title-color" style="line-height:60px;">Mental health journal for your healthy living during the pandemic</h2>
+			</div>
+			<div class="col-lg-8">
+				<p class="mt-4">
+                    Mental health is one of the most important things to pay attention to amid the COVID-19 pandemic. 
+                    We believe that life is getting harder by the day after more than a year of living under the coronavirus 
+                    threat with limited social interaction. Many people suffer from depression and 
+                    frustration because they no longer have a place to confide in due to the awkwardness of interacting with other people. 
+                    Therefore, we created a website application that can be a new safe place for everyone named reflekt.io. 
+                    This website application has various features which hopefully can help us maintain our mental health during this hard situation. 
+                    We hope that this web application will allow people to live life more easily during this pandemic.
+                </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+    <div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h2 class="mb-4">Our Features</h2>
+					<div class="divider mx-auto my-4"></div>
+				</div>
+		    </div>
+        </div>
+		<div class="row justify-content-center">
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<h4 class="mb-3">Journaling</h4>
+                    <i class="icofont-pencil-alt-1"></i>
+					<p>A private place for users to express their thoughts and emotions throughout the day.</p>
+				</div>
+			</div>
+            <div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<h4 class="mb-3">Ide Kegiatan</h4>
+                    <i class="icofont-aim"></i>
+					<p>Activity recommendations based on users' journaling results to improve their mental health.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<h4 class="mb-3">Pojok Curhat</h4>
+                    <i class="icofont-ui-text-chat"></i>
+					<p>A public place for users to confide all of the thoughts and emotions that are haunting them.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<h4 class="mb-3">Tembok Harapan</h4>
+                    <i class="icofont-paper-plane"></i>
+					<p>A private place for users to write down all the wishes that they want to achieve.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="about-block-item">
+					<h4 class="mb-3 mt-3">Kutipan Penyemangat</h4>
+                    <i class="icofont-quote-left"></i>
+					<p>A place for users to submit their inspirational quotes, which will be published publicly.</p>
+				</div>
+			</div>
+            <div class="col-lg-3 col-md-6">
+				<div class="about-block-item mb-5 mb-lg-0">
+					<h4 class="mb-3 mt-3">Deteksi Dini Depresi</h4>
+                    <i class="icofont-search-2"></i>
+					<p>A tool that helps users to find out if they are currently suffering from depression or not.</p>
+				</div>
+			</div>
+		</div>
+    </div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h2 class="mb-4">Meet Our Team</h2>
+					<div class="divider mx-auto my-4"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Aurelia Amanda Robert</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Kevin</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Loanda Gunawan</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Muhammad Athallah</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Muhammad Bintang Azriel Aditya Wardhana</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Muhammad Fikri Haryanto</h4>
+                    <p class="team">Developer</p>
+                </div>
+			</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                <img src="{% static 'img/person.jpg' %}" class="img-fluid w-100">
+                <div>
+                    <h4 class="team-name mt-1">Teuku Faiz Aryasena</h4>
+                    <p class="team">Developer</p>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+
+<section class="page-title bg-contact" id="contact">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <<span class="text-white">Contact Us</span>>
+          <h1 class="text-capitalize mb-5" style="color: #fff;font-size: 50px;">Get in Touch</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pb-0">
+    <div class="container">
+         <div class="row">
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="contact-block mb-4 mb-lg-0">
+                    <i class="icofont-live-support"></i>
+                    <h5>Call Us</h5>
+                     +6281-2345-6789
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="contact-block mb-4 mb-lg-0">
+                    <i class="icofont-support-faq"></i>
+                    <h5>Email Us</h5>
+                     reflektio@ui.ac.id 
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="contact-block mb-4 mb-lg-0">
+                    <i class="icofont-location-pin"></i>
+                    <h5>Location</h5>
+                    Faculty of Computer Science,
+                    Universitas Indonesia
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-form-wrap section" style="padding-top:40px">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center">
+                    <h2 style="font-size:40px;">We'd Love to Hear From You</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>Whether you have a question or suggestions for future work — we're ready to answer any questions and consider the advice.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form id="contact-form" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                {{form.full_name}}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                {{form.email}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                {{form.query_topic}}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                {{form.phone_number}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-2 mb-4">
+                        {{form.message}}
+                    </div>
+                    <div class="text-center">
+                        <input class="btn btn-main" name="submit" type="submit" value="Send Message"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
