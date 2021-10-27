@@ -11,5 +11,5 @@ def index(request):
         return HttpResponseRedirect('/about-us')
         
     context = {'form':form}
-    return render(request, 'about_index.html', context)
+    return render(request, 'about_us_index.html', context)
   
