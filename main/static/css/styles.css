@@ -958,6 +958,81 @@ td {
   border-radius: 4px;
   box-sizing: border-box;
 }
+#curhat {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Takes the sub tag of customer td and th and apply the style */
+#curhat td, #curhat th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* for every tr which is a child of customers, if its defined on even order, set a different bg color */
+#curhat tr:nth-child(even){
+  background-color: #FDF8E2;
+}
+
+/* for every tr which is a child of customer, if hovered, change bg color */
+#curhat tr:hover {
+  background-color: #ddd;
+}
+
+/* eventhough above already has th, this will override or add to it */
+/* extra note, padding is distance between element within with the container border */
+#curhat th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333;
+  color: white;
+}
+
+.curhat-container {
+display: flex;
+justify-content: center;
+margin: 0rem 3rem 3rem 3rem;
+}
+
+.table {
+background-color: #FDF8E2
+}
+
+.card-container {
+  margin: 0rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 98%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card h5, p{
+  padding: 5px 20px 0px 20px;
+}
+
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #9ACDE0; /*Crustacean */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.card:hover {
+  box-shadow: 0 16px 16px 0 rgba(49, 42, 42, 0.2);
+}
+#header_pc {
+  color: white;
+}
 
 /*************************/
 /*     Media Queries     */

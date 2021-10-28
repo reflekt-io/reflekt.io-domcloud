@@ -2,6 +2,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .models import Curhatan
 from .forms import CurhatForm
+from django.core import serializers
 
 # imported login required
 from django.contrib.auth.decorators import login_required
@@ -39,3 +40,8 @@ def curhat_list(request):
 
 def navbar(request):
     return render(request, 'pojok_curhat_navbar.html')
+
+@login_required(login_url='/admin/login/')
+def json_pojok_curhat(request):
+    data = serializers.serialize('json', Curhatan.objects.all())
+    return HttpResponse(data, content_type="application/json")
