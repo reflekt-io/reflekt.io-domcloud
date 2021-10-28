@@ -1,4 +1,5 @@
 from django.contrib import admin
-from kutipan_penyemangat.models import Quotes
 # Register your models here.
+from kutipan_penyemangat.models import Quotes
+
 admin.site.register(Quotes)
