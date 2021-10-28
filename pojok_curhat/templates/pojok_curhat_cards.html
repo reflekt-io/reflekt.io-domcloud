@@ -1,52 +1,29 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load static %}
 
-<html lang="en">
-<head>
+{% block title %}Pojok Curhat - reflekt.io{% endblock %}
 
-  <meta charset="UTF-8" />
-  <title>Notes List</title>
+{% block content %}
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Curhatanmu</h1>
+                <h3 id = "header_pc">Dalam Format Baru</h3>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
 
-  <link rel="stylesheet" href="{% static 'css/cards.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/button.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
-
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar");
-    });
-  </script>
-
-</head>
-<body>
-
-  <div id="nav-placeholder"></div>
-
-
-  <div class="btn-container">
-    <a href="/pojok-curhat/add-curhat" class="button">Tambahkan Curhatan</a>
-  </div>
-
-  <div class="card-container">
-    {% if Curhat %}
-      {% for curhatan in Curhat %}
-        <div class="card">
-          <div class="card-header">
-            <h3>{{ curhatan.title }}</h3>
-          </div>
-          <div class="card-content">
-            
-            <h4>From: {{ curhatan.fromCurhat }}</h5>
-            <h4>Content: </h5>
-            <p>{{ curhatan.message }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    {% endif %}
+  <div class="cards" id="curhat_container">
   </div>
 
 
-</body>
-</html>
+{% endblock %}
+{% block script %}
+<!-- Scripts -->
+<script src="{% static 'js/pojok_curhat_js.js' %}"></script>
+{% endblock %}
