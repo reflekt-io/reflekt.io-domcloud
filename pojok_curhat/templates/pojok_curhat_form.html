@@ -18,13 +18,8 @@
 </header> <!-- end of ex-header -->
 <!-- end of header -->
 
-<body>
-
-  <div id="nav-placeholder"></div>
-
-
   <div class="button-div">
-    <form class="form" action="" method="POST">
+    <form class="form-curhat" action="" method="POST">
       {% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Submit" class="button">
