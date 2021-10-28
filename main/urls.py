@@ -1,6 +1,5 @@
 from django.urls import path
-
-from main.views import home, project, terms, privacy
+from main.views import home, loginUser, project, registerUser, terms, privacy
 
 app_name = 'main'
 
@@ -9,4 +8,6 @@ urlpatterns = [
     path('project', project, name='project'),
     path('terms', terms, name='terms'),
     path('privacy', privacy, name='privacy'),
+    path('login/', loginUser, name='login'),
+    path('register/', registerUser, name='register'),
 ]
