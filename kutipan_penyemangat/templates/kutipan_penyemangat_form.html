@@ -1,98 +1,13 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Kutipan Penyemangat Form</title>
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-    html {
-      background-color: #3c3c3c;
-    }
-
-    h1 {
-      text-align: center;
-      font-family: "Open-Sans";
-    }
-
-    body {
-      margin: 50px 0 0 0;
-      font-family: Quicksand;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    input:focus,
-    button:focus,
-    textarea:focus,
-    select:focus {
-      outline: 0;
-    }
-
-    #wrapper {
-      width: 400px;
-      text-align: center;
-      margin: 0 auto;
-
-    }
-
-    #wrapper section {
-      width: 460px;
-      float: left;
-      text-align: left;
-      padding: 25px;
-      background: rgba(255, 255, 255, 0.7);
-      -moz-box-shadow: 0 0 1px 2px rgba(20, 20, 20, 0.3);
-      -webkit-box-shadow: 0 0 1px 2px rgba(20, 20, 20, 0.3);
-      border-radius: 5px;
-      -moz-transition: 0.3s linear;
-      -webkit-transition: 0.3s linear;
-    }
-
-    #wrapper section:hover {
-      -moz-box-shadow: 0 0 4px 3px #ff664a;
-      -webkit-box-shadow: 0 0 4px 3px #66ccff;
-      background: #fff;
-    }
-
-    #wrapper section header {
-      width: 25%;
-      float: left;
-      text-align: right;
-    }
-
-    #wrapper section header .name {
-      width: 90%;
-      float: left;
-      margin: 9px 0% 23px 0;
-    }
-
-    #wrapper section .inputs {
-      width: 75%;
-      float: left;
-    }
-
-    #wrapper section .inputs input {
-      width: 93.5%;
-      float: left;
-      padding: 10px 3%;
-      border: 1px solid #ddd;
-      margin: 0 0% 10px 0;
-      font-family: Quicksand;
-      font-size: 16px;
-      border-radius: 5px;
-      background: rgba(102, 204, 255, 0.1);
-      -moz-transition: 0.2s linear;
-      -webkit-transition: 0.2s linear;
-    }
-
-    #wrapper section .inputs input:hover {
-      background: #fff;
-      border: 1px solid #ccc;
-    }
-
-  </style>
+  
+  <link rel="stylesheet" href="{% static 'css/kutipan_penyemangat_form.css' %}" />
 </head>
 
 <body>
@@ -120,5 +35,4 @@
       </form>
     </div>  
 </body>
-
 </html>

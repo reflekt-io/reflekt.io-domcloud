@@ -2,70 +2,67 @@
 
 {% load static %}
 
-{% block title %}Activity Recommendations{% endblock %}
+{% block title %}Refleksi: Ide Kegiatan{% endblock %}
 
 {% block content %}
+    <link href="{% static 'css/refleksi_style.css' %}" rel="stylesheet" >
+
     <!-- Header -->
     <header class="ex-header">
         <div class="container">
             <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                    <h1>Activity Recomendations</h1>
+                <div class="col-xl-10 offset-xl-1 text-center">
+                    <h1>Refleksi: Ide Kegiatan</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title"><h2>Tambah kegiatan</h2></div>
+                </div>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <label for="id_nama">Nama kegiatan</label>
+                        <input type="text" name="nama" class="form-control" maxlength="40" required id="id_nama">
+                        <br>
+                        <label for="id_deskripsi">Deskripsi tambahan</label>
+                        <input type="text" name="deskripsi" class="form-control" maxlength="60" required id="id_deskripsi">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="submit" value="Submit" class='btn-solid-lg'>Tambahkan</button>
+                    <button id="button-close" class='btn-solid-lg' data-dismiss='modal'>Tutup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal -->
+
     <div class="cards-1 ex-basic-1 pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mb-3">
-                    <h2>Kegiatan yang telah kamu lakukan</h2>
+                    <h2>Kegiatan yang pernah kamu lakukan</h2>
                     <p>Di bawah ini beberapa kegiatan yang pernah kamu lakukan sebelumnya.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Card -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Bermain Game</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4">
+                    <div class="card mb-4 past-card">
                         <div class="card-body">
                             <h4>Menonton Film</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                            <p>Nanti Kita Cerita Tentang Hari ini</p>
                         </div>
                     </div>
-
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Membaca Novel</h4>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Mendengarkan musik</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-
-                     <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Olahraga</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                </div>
+            </div>
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
 
@@ -73,47 +70,67 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mb-3">
-                    <h2>Ide kegiatan yang dapat kamu lakukan</h2>
+                    <h2>Silakan pilih kegiatan yang akan kamu lakukan</h2>
                     <p>Di bawah ini beberapa rekomendasi kegiatan yang dapat kamu lakukan.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-lg-12">
                     <!-- Card -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Bermain Game</h4>
-                        </div>
+                    <div class="card mb-4 add-card">
+                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
+                            <div class="card-body text-center">
+                                <h4>Bermain Game</h4>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Menonton Film</h4>
-                        </div>
+                    <div class="card mb-4 add-card">
+                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
+                            <div class="card-body text-center">
+                                <h4>Menonton Film</h4>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Membaca Novel</h4>
-                        </div>
+                    <div class="card mb-4 add-card">
+                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
+                            <div class="card-body text-center">
+                                <h4>Membaca Novel</h4>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Mendengarkan musik</h4>
-                        </div>
+                    <div class="card mb-4 add-card">
+                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
+                            <div class="card-body text-center">
+                                <h4>Mendengarkan Musik</h4>
+                            </div>
+                        </a>
                     </div>
 
-                     <div class="card mb-4">
-                        <div class="card-body">
-                            <h4>Olahraga</h4>
-                        </div>
+                     <div class="card mb-4 add-card">
+                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
+                            <div class="card-body text-center">
+                                <h4>Lainnya</h4>
+                            </div>
+                        </a>
                     </div>
                     <!-- end of card -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            <div class="row pt-5">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg" href="#test">Kembali</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
 
 {% endblock content %}
+
+{% block script %}
+    <script src="{% static 'js/refleksi_script.js' %}" type="text/javascript"></script>
+{% endblock script%}

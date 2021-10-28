@@ -1,0 +1,92 @@
+h1 {
+  font-family: Poppins;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+h2 {
+  font-family: Poppins;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-family: system-ui, -apple-system, system-ui, ".SFNSText-Regular",
+    sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #24262a;
+  height: 100vh;
+  padding-bottom: 4rem;
+  font-family: system-ui, -apple-system, system-ui, ".SFNSText-Regular",
+    sans-serif;
+  display: grid;
+  place-items: center center;
+  color: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 40px;
+  grid-gap: 80px;
+}
+
+.card {
+  background-color: #37373d;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.field {
+  padding: 20px 10px;
+}
+
+.field h3 {
+  font-size: 24px;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.field p {
+  color: #a0a0a0;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.add-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  background-color: #a0a0a059;
+}
+
+.add-form-section > p {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--main-red);
+}
+
+a {
+  color: whitesmoke;
+}
+
+a:hover {
+  color: darkgrey;
+}
