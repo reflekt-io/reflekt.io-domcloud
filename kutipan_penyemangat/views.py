@@ -6,9 +6,7 @@ from kutipan_penyemangat.forms import QuotesForm
 from django.core import serializers
 # Create your views here.
 def index(request):
-    quotes = Quotes.objects.all() # TODO Implement this
-    response = {'quotes': quotes}
-    return render(request, 'kutipan_penyemangat_index.html', response)
+    return render(request, 'kutipan_penyemangat_index.html')
 
 @login_required(login_url='/admin/login/')
 def add_quotes(request):
