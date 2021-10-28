@@ -1,5 +1,5 @@
 from django.db import models
 
-class Activity(models.Model):
-    name = models.CharField(max_length=40)
-    description = models.CharField(max_length=60)
+class Kegiatan(models.Model):
+    nama = models.CharField(max_length=40)
+    deskripsi = models.CharField(max_length=60)
