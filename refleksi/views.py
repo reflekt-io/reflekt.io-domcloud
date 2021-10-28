@@ -1,8 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import Kegiatan
+from django.shortcuts import render
 
 def index(request):
-    kegiatan_list = Kegiatan.objects.all()
-    response = {'kegiatan': kegiatan_list,
-    }
+    response = {}
     return render(request, 'refleksi_index.html', response)
