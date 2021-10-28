@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Pojok Curhat - reflekt.io{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Tambahkan Curhatanmu <a href="/pojok-curhat/add-curhat" class="add-curhat">Disini.</a></h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+
+  <div id="nav-placeholder"></div>
+
+
+
+    <div class = "curhat-container">
+    <table id = "curhat">
+    {% if Curhat %}
+      <tr>
+        <th>From</th>
+        <th>Title</th>
+        <th>Message</th>
+      </tr>
+      <!-- TODO loop from Curhat model -->
+      <!-- EXAMPLE SECTION -->
+      
+        {% for curhatan in Curhat %}
+        <tr>
+            <td>{{ curhatan.fromCurhat }}</td>
+            <td>{{ curhatan.title }}</td>
+            <td>{{ curhatan.message }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+          <h3>Sepertinya, Anda belum pernah curhat disini</h3>
+      {% endif %}
+      <!-- END SECTION -->
+    </table>
+    </div>
+    <!-- end of basic -->
+{% endblock %}

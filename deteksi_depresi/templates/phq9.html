@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}PHQ9{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Patient Health Questionnaire (PHQ-9)</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+<!-- Basic -->
+<div class="ex-basic-1 pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                {% if hasil_deteksi %}
+                <div id="past-result" class="card text-center mb-4">
+                    <div class="card-header">
+                        Hasil Terakhir Deteksi Depresi
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ hasil_deteksi.result }}</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ hasil_deteksi.date }}
+                    </div>
+                </div>
+                {% endif %}
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+
+<!-- Basic -->
+<div class="ex-basic-1 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <form action="{% url 'deteksi_depresi:phq9-json' %}" method="POST" id="phq9form" class="form">
+                    {% csrf_token %}
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th style="width: 50%">Dalam 2 minggu terakhir, seberapa sering Anda terganggu oleh masalah-masalah berikut?</th>
+                                <th style="width: 12.5%" class="text-center">Tidak pernah</th>
+                                <th style="width: 12.5%" class="text-center">Beberapa hari</th>
+                                <th style="width: 12.5%" class="text-center">Lebih dari seminggu</th>
+                                <th style="width: 12.5%" class="text-center">Hampir setiap hari</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for field in form %}
+                            <tr>
+                                <td><label class="" for="{{ field.auto_id }}">{{ field.label }}</label></th>
+                
+                                {% for choice in field %}
+                                <td class="text-center align-middle">{{ choice }}</th>
+                                {% endfor %}
+                
+                            </tr>
+                            {% endfor %}
+                            <tr class="table-active">
+                                <td>Hasil deteksi depresi</td>
+                                <td colspan='4' class="text-center font-weight-bold" id='result'></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input class="btn btn-block btn-solid-lg" type="submit" value="Lihat hasil">
+                </form>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of ex-basic-1 -->
+<!-- end of basic -->
+{% endblock %}
+
+{% block script %}
+<!-- Scripts -->
+<script src="{% static 'js/phq9.js' %}"></script>
+{% endblock %}

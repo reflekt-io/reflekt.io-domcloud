@@ -4,5 +4,5 @@ from .views import index
 app_name = "refleksi"
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', index),
 ]
