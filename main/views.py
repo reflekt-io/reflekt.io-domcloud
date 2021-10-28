@@ -49,4 +49,4 @@ def registerUser(request):
 
 def logoutUser(request):
 	logout(request)
-	return redirect('home:login')
+	return redirect('main:login')

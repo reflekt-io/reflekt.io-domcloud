@@ -19,7 +19,7 @@
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: white;
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -35,11 +35,11 @@
 		}
 
 		#form-title{
-			color: #fff;
+			color: black;
 		}
 		.login_btn {
 			width: 100%;
-			background: #33ccff !important;
+			background: #35363a !important;
 			color: white !important;
 		}
 		.login_btn:focus {
@@ -61,10 +61,18 @@
 			outline: 0px !important;
 		}
 
+		.home{
+			color: white;
+			font-weight: 700;
+			font-size: 1.875rem;
+			padding-left: 15%;
+		}
+
 	</style>
 
 </head>
 <body>
+	<a class="home" href="{% url 'main:home' %}">reflekt.io</a>
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
