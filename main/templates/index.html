@@ -14,7 +14,10 @@
                 <div class="text-container">
                     <h1 class="h1-large">A new safe place, tailored for each individual.</h1>
                     <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
-                    <a class="btn-solid-lg" href="{% url 'main:login' %}">Login</a>
+                    {% if user.is_authenticated %}
+                    {% else %}
+                        <a class="btn-solid-lg" href="{% url 'main:login' %}">Login</a>
+                    {% endif %}
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
