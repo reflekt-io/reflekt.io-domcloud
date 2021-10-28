@@ -9,16 +9,17 @@
 
 <!-- Header -->
 <header class="ex-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-10 offset-xl-1">
-                <h1>List Kutipan Penyemangat Untukmu</h1>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 offset-xl-1">
+        <h1>List Kutipan Penyemangat Untukmu</h1>
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
 </header> <!-- end of ex-header -->
 <!-- end of header -->
 <link rel="stylesheet" href="{% static 'css/kutipan_penyemangat_index.css' %}" />
+
 <body>
   <div class="cards">
     <div class="card card1">
@@ -121,21 +122,11 @@
     </div>
   </div>
 
-  
-  <div class="cards">
-    {% for i in quotes %}
-    <div class="card card1">
-      <div class="container">
-        <div class="field">
-          <h3>{{i.name}}</h3>
-          <p>{{i.quotes_form}}</p>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+
+  <div class="cards" id="quotes_container">
   </div>
-  
-  
+
+
   </div>
   <section id="add-form-section" class="add-form-section">
     <h2>Yuk, tambahin lagi Kutipan Penyemangat ini.</h2>
@@ -143,7 +134,11 @@
     <br>
     <br>
   </section>
-  
-</body>
 
+</body>
+{% endblock %}
+
+{% block script %}
+<!-- Scripts -->
+<script src="{% static 'js/kutipan_penyemangat.js' %}"></script>
 {% endblock %}
