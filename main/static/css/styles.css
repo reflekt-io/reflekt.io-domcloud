@@ -940,6 +940,24 @@ td {
 .journal-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+/***********************/
+/*     Form Curhat     */
+/***********************/
+
+.form-curhat{
+  border-radius: 5px;
+  margin: 10% 25%;
+  padding: 10px 20px;
+}
+.form-curhat input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 /*************************/
 /*     Media Queries     */
