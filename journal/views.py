@@ -6,13 +6,13 @@ from django.urls import reverse
 from journal.models import Journal
 from journal.forms import JournalForm
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='/login/')
 def index(request):
     journals = Journal.objects.all()
     response = {'journals': journals}
     return render(request, 'journal_index.html', response)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='/login/')
 def add_journal(request):
     context = {}
   
@@ -29,7 +29,7 @@ def add_journal(request):
     context['form']= form
     return render(request, "add_journal.html", context)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='/login/')
 def get_journal_json(request):
     journals = Journal.objects.all()
     data = serializers.serialize('json', journals)
