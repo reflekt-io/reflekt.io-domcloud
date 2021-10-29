@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("TESSSS");
   $.ajax({
     url: "/pojok-curhat/json",
     success: function (results) {
