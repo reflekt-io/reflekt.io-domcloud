@@ -8,15 +8,6 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'index.html')
 
-def project(request):
-    return render(request, 'project.html')
-
-def terms(request):
-    return render(request, 'terms.html')
-
-def privacy(request):
-    return render(request, 'privacy.html')
-
 def loginUser(request):
     if request.method == 'POST':
         username = request.POST.get('username')
