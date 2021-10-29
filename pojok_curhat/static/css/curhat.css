@@ -1,68 +1,78 @@
-.notes-list {
-    background-color: #1d60dd
-  }
-  
-body {
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-}
-
-.card-container {
-    margin: 0rem 2rem 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    width: 98%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+/***********************/
+/*     Form Curhat     */
+/***********************/
+.form-curhat{
     border-radius: 5px;
-    transition: 0.3s;
-}
+    margin: 5% 25%;
+    padding: 10px 20px;
+  }
+.form-curhat input[type=text], select {
+    width: 100%;
+    padding: 4px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.form-curhat textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fafafa;
+    resize: vertical;
+  }
 
-.card-header {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #0b36a8; /*Crustacean */
+.form-curhat input[type=submit] {
+    width: 50%;
+    background-color: #0b36a8;
     color: white;
-    border-radius: 5px;
-    padding: 0px 20px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.card-content {
-    padding: 1rem;
-}
-
-.card:hover {
-    box-shadow: 0 10px 16px 0 rgba(49, 42, 42, 0.2);
+.form-curhat input[type=submit]:hover {
+    background-color: transparent;
+    color: #0b36a8; /* needs to stay here because of the color property of a tag */
+    text-decoration: none;
+    border: 1px solid #0b36a8;
   }
- #curhat {
+  #curhat {
     border-collapse: collapse;
     width: 100%;
   }
   
   /* Takes the sub tag of customer td and th and apply the style */
-#curhat td, #curhat th {
+  #curhat td, #curhat th {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
   /* for every tr which is a child of customers, if its defined on even order, set a different bg color */
-#curhat tr:nth-child(even){
+  #curhat tr:nth-child(even){
     background-color: #FDF8E2;
   }
   
   /* for every tr which is a child of customer, if hovered, change bg color */
-#curhat tr:hover {
+  #curhat tr:hover {
     background-color: #ddd;
   }
   
   /* eventhough above already has th, this will override or add to it */
-
+  /* extra note, padding is distance between element within with the container border */
+  #curhat th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+  }
   
   .curhat-container {
   display: flex;
