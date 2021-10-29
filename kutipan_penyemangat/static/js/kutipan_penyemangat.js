@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("TESSSS");
   $.ajax({
     url: "/kutipan-penyemangat/json",
     success: function (results) {
