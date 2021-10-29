@@ -369,34 +369,7 @@ input[type="checkbox"] {
   background-color: transparent;
   color: #24262a;
 }
-/**********************/
-/*       TAMBAHAN     */
-/**********************/
-input[type=submit] {
-  width: 100%;
-  background-color: #0b36a8;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: vertical;
-  }
-  
-  input[type=submit]:hover {
-  background-color: #5EA9BE;
-  }
+
 /**********************/
 /*     Navigation     */
 /**********************/
@@ -939,99 +912,6 @@ td {
 /* To make zebra-striped table style */
 .journal-table tr:nth-child(even) {
   background-color: #f2f2f2;
-}
-/***********************/
-/*     Form Curhat     */
-/***********************/
-
-.form-curhat{
-  border-radius: 5px;
-  margin: 10% 25%;
-  padding: 10px 20px;
-}
-.form-curhat input[type=text], select {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-#curhat {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-/* Takes the sub tag of customer td and th and apply the style */
-#curhat td, #curhat th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-/* for every tr which is a child of customers, if its defined on even order, set a different bg color */
-#curhat tr:nth-child(even){
-  background-color: #FDF8E2;
-}
-
-/* for every tr which is a child of customer, if hovered, change bg color */
-#curhat tr:hover {
-  background-color: #ddd;
-}
-
-/* eventhough above already has th, this will override or add to it */
-/* extra note, padding is distance between element within with the container border */
-#curhat th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #333;
-  color: white;
-}
-
-.curhat-container {
-display: flex;
-justify-content: center;
-margin: 0rem 3rem 3rem 3rem;
-}
-
-.table {
-background-color: #FDF8E2
-}
-
-.card-container {
-  margin: 0rem 2rem 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  width: 98%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.card h5, p{
-  padding: 5px 20px 0px 20px;
-}
-
-.card-header {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #9ACDE0; /*Crustacean */
-  color: white;
-  border-radius: 5px;
-  padding: 5px 20px;
-}
-.card:hover {
-  box-shadow: 0 16px 16px 0 rgba(49, 42, 42, 0.2);
-}
-#header_pc {
-  color: white;
 }
 
 /*************************/
