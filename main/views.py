@@ -42,7 +42,7 @@ def registerUser(request):
             form.save()
             user = form.cleaned_data.get('username')
             messages.success(request, 'Account was created for ' + user)
-            return redirect('home:login')
+            return redirect('main:login')
 
     context = {'form':form}
     return render(request, 'register.html', context)
