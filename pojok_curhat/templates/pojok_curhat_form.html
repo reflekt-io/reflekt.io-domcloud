@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/curhat.css' %}" /> 
+
 <!-- Header -->
 <header class="ex-header">
     <div class="container">
@@ -19,11 +21,13 @@
 <!-- end of header -->
 
   <div class="button-div">
+  <div class="form-container">
     <form class="form-curhat" action="" method="POST">
       {% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Submit" class="button">
     </form>
+  </div>
   </div>
 
 {% endblock %}
