@@ -26,7 +26,7 @@
                 <div class="modal-header">
                     <div class="modal-title"><h2>Tambah kegiatan</h2></div>
                 </div>
-                <form method="POST" action="">
+                <form id="kegiatanForm" method="POST" action="" role="form">
                     {% csrf_token %}
                     <div class="modal-body">
                         <label for="id_nama">Nama kegiatan</label>
@@ -86,48 +86,7 @@
             </div> <!-- end of row -->
 
             <div class="row text-center">
-                <div class="col-lg-12">
-                    <!-- Card -->
-                    <div class="card mb-4 add-card">
-                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
-                            <div class="card-body text-center">
-                                <h4>Bermain Game</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card mb-4 add-card">
-                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
-                            <div class="card-body text-center">
-                                <h4>Menonton Film</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card mb-4 add-card">
-                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
-                            <div class="card-body text-center">
-                                <h4>Membaca Novel</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card mb-4 add-card">
-                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
-                            <div class="card-body text-center">
-                                <h4>Mendengarkan Musik</h4>
-                            </div>
-                        </a>
-                    </div>
-
-                     <div class="card mb-4 add-card">
-                        <a class="stretched-link text-decoration-none ujicoba" href data-toggle="modal" data-target="#modal-form">
-                            <div class="card-body text-center">
-                                <h4>Lainnya</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end of card -->
+                <div class="col-lg-12" id="card-recomendation">
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
