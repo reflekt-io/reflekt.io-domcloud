@@ -1,6 +1,7 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
+from django.urls import reverse
 from kutipan_penyemangat.models import Quotes
 from kutipan_penyemangat.forms import QuotesForm
 from django.core import serializers
@@ -14,7 +15,7 @@ def add_quotes(request):
         form = QuotesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index-kutipan-penyemangat')
+            return HttpResponseRedirect(reverse('kutipan_penyemangat:index'))
     else:
         form = QuotesForm()
         response = {'form': form}
