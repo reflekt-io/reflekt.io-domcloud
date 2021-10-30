@@ -1,7 +1,6 @@
 # reflekt.io
 
 [![Test and Deploy][actions-badge]][commits-gh]
-[![Coverage Report][coverage-codecov]][codecov-link]
 
 Sebuah tempat baru yang akan menjadi tempat aman untuk merefleksikan diri, berkeluh kesah, memberikan semangat kepada sesama, dan menyuarakan harapan tanpa rasa takut.
 
@@ -71,5 +70,3 @@ Berikut ini adalah sumber referensi yang digunakan dalam pembuatan proyek ini.
 
 [actions-badge]: https://github.com/reflekt-io/reflekt.io/workflows/Test%20and%20Deploy/badge.svg
 [commits-gh]: https://github.com/reflekt-io/reflekt.io/commits/master
-[coverage-codecov]: https://codecov.io/gh/reflekt-io/reflekt.io/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/reflekt-io/reflekt.io
