@@ -8,7 +8,7 @@ from journal.forms import JournalForm
 
 @login_required(login_url='/login/')
 def index(request):
-    journals = Journal.objects.all()
+    journals = Journal.objects.filter(user=request.user)
     response = {'journals': journals}
     return render(request, 'journal_index.html', response)
 
@@ -22,7 +22,9 @@ def add_journal(request):
     # check if form data is valid (prevent from SQL injection, too)
     if form.is_valid() and request.method == 'POST':
         # save the form data to the model
-        form.save()
+        journal_form = form.save(commit=False)
+        journal_form.user = request.user
+        journal_form.save()
         # return to index after saving data (POST Redirect)
         return HttpResponseRedirect(reverse('journal:index'))
     
@@ -31,6 +33,6 @@ def add_journal(request):
 
 @login_required(login_url='/login/')
 def get_journal_json(request):
-    journals = Journal.objects.all()
+    journals = Journal.objects.filter(user=request.user)
     data = serializers.serialize('json', journals)
     return HttpResponse(data, content_type="application/json")
