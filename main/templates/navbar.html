@@ -21,8 +21,12 @@
                     <a class="nav-link" href="{% url 'main:home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'deteksi_depresi:phq9' %}">Deteksi Dini Depresi</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'kutipan_penyemangat:index' %}">Kutipan Penyemangat</a>
                 </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jurnal</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -30,6 +34,9 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'journal:add_journal' %}">Jurnal Baru</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'refleksi:index' %}">Refleksi</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pojok Curhat</a>
@@ -40,20 +47,19 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'refleksi:index' %}">Refleksi</a>
+                    <a class="nav-link" href="{% url 'tembok_harapan:index' %}">Tembok Harapan</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about_us:index' %}">About Us</a>
                 </li>
-
+                
                 {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <div class="user-name">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{request.user}}</a>
                     </div>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="{% url 'tembok_harapan:index' %}">Tembok Harapan</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'main:logout' %}">Logout</a>
                     </div>
                 </li>
