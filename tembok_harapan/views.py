@@ -1,13 +1,16 @@
 from django.http import response
 from django.shortcuts import render, redirect
 from tembok_harapan.forms import harapanForm
+from django.contrib.auth.decorators import login_required
 from .models import harapan
 
+@login_required(login_url='/login/')
 def index(request):
     log_user =  request.user
     list_harapan = harapan.objects.filter(user=log_user)
     return render(request, 'harapan_list.html', {'list_harapan':list_harapan})
 
+@login_required(login_url='/login/')
 def add_harapan(request):
     if request.method == 'POST':
         form = harapanForm(request.POST)
