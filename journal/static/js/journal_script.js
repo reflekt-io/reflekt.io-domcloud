@@ -115,7 +115,6 @@ $(document).ready(function () {
   $.ajax({
     url: "/journal/json",
     success: function (results) {
-      console.log(results);
       results.map((result) => {
         // Date customatization
         var dateData = new Date(result.fields.date);

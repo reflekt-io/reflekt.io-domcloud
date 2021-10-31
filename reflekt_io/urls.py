@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from main.views import loginUser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Main URL (currently hello world)
+    # Main URLs
     path('', include('main.urls')),
+    path(r'login/', loginUser),
     # URL integration
     path('journal/', include('journal.urls', namespace='journal')),
     path('pojok-curhat/', include('pojok_curhat.urls', namespace='pojok_curhat')),
