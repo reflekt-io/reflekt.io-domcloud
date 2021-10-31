@@ -1,8 +1,10 @@
 from django.urls import path
-from main.views import home
+from tembok_harapan.views import index, add_harapan
 
-app_name = "tembok_harapan"
+app_name = 'tembok_harapan'
 
 urlpatterns = [
-    path('', home),
+    path('', index, name='index'),
+    path('add-harapan', add_harapan, name='add_harapan'),
+
 ]
