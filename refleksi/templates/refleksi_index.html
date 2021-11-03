@@ -49,13 +49,13 @@
         <div class="container">
             {% if kegiatan %}
                 <div class="row">
-                    <div class="col-lg-12 mb-3">
+                    <div class="col-lg-12 status-kegiatan">
                         <h2>Kegiatan yang pernah kamu lakukan</h2>
-                        <p>Di bawah ini beberapa kegiatan yang pernah kamu lakukan sebelumnya.</p>
+                        <p>Halo {{ user }}! Di bawah ini beberapa kegiatan yang pernah kamu lakukan sebelumnya.</p>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 riwayat-kegiatan">
                         {% for k in kegiatan %}
                             <div class="card mb-4 past-card">
                                 <div class="card-body">
@@ -68,10 +68,16 @@
                 </div>
             {% else %}
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h2>Belum ada kegiatan yang kamu tambahkan</h2>
+                    <div class="col-lg-12 status-kegiatan">
+                        <h2>Halo {{ user }}!</h2>
+                        <p>Belum ada kegiatanmu yang dicatat nih :(</p>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12 riwayat-kegiatan">
+                        <!-- kosong -->
+                    </div>
+                </div>
             {% endif %}
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
@@ -87,6 +93,13 @@
 
             <div class="row text-center">
                 <div class="col-lg-12" id="card-recomendation">
+                    <div class='card mb-4 add-card'>
+                        <a class='stretched-link text-decoration-none add-rec' href>
+                            <div class='card-body text-center'>
+                                <h4>(+) Tambah Rekomendasi</h4>
+                            </div>
+                        </a>
+                    </div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 

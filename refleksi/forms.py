@@ -2,6 +2,6 @@ from django import forms
 from .models import Kegiatan
 
 class KegiatanForm(forms.ModelForm):
-    class Meta:
+    class Meta: 
         model = Kegiatan
-        fields = "__all__"
+        exclude = ['user']
