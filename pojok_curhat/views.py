@@ -7,13 +7,13 @@ from django.core import serializers
 # imported login required
 from django.contrib.auth.decorators import login_required
 
-@login_required(login_url='/login/')
+@login_required(login_url='/admin/login/')
 def index(request):
     Curhat = Curhatan.objects.all().values() 
     response = {'Curhat': Curhat}
     return render(request, 'pojok_curhat_index.html', response)
 
-@login_required(login_url='/login/')
+@login_required(login_url='/admin/login/')
 def add_curhat(request):
   
     # create object of form
@@ -31,7 +31,7 @@ def add_curhat(request):
 
     return render(request, 'pojok_curhat_form.html', {'form': form})
 
-@login_required(login_url='/login/')
+@login_required(login_url='/admin/login/')
 def curhat_list(request):
     Curhat = Curhatan.objects.all().values()
     response = {'Curhat': Curhat}
@@ -41,7 +41,7 @@ def curhat_list(request):
 def navbar(request):
     return render(request, 'pojok_curhat_navbar.html')
 
-@login_required(login_url='/login/')
+@login_required(login_url='/admin/login/')
 def json_pojok_curhat(request):
     data = serializers.serialize('json', Curhatan.objects.all())
     return HttpResponse(data, content_type="application/json")
