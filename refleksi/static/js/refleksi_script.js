@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $(document).on("submit", "#kegiatanForm", function(event) {
         event.preventDefault();
-        console.log("form submitted!")
         $.ajax({
             data: $(this).serialize(),
             type: "POST",
@@ -41,23 +40,44 @@ $(document).ready(function() {
     var recomendation = new Set([
         "bermain game",
         "menonton film",
-        "membaca novel",
+        "membaca buku",
         "mendengarkan musik",
-        "jalan-jalan",
+        "belanja",
+        "mengunjungi tempat wisata",
         "olahraga",
-        "menulis"
+        "menulis",
+        "memasak",
+        "membersihkan rumah"
     ]);
 
-    card_rec(recomendation);
+    add_recomendation(recomendation);
 
-    function card_rec(show) {
+    function add_recomendation(daftar) {
+        $.ajax({
+            data: {},
+            type: "GET",
+            url: "add-deskripsi",
+            success: function (response) {
+                $.each(response, function(index, value) {
+                    var nama = value.fields["nama"];
+                    daftar.add(nama.toLowerCase());
+                });
+                show_recomendation(daftar);
+            },
+            error: function (request, status, error) {
+                console.log(request.responseText);
+            }
+        });
+    }
+
+    function show_recomendation(daftar) {
         var card = "<div class='card mb-4 add-card'>";
         card += "<a class='stretched-link text-decoration-none add-rec' href ";
         card += "data-toggle='modal' data-target='#modal-form'>"
         card += "<div class='card-body text-center'><h4>";
         var ccard = "</h4></div></a></div>";
 
-        show.forEach(function(value) {
+        daftar.forEach(function(value) {
             value = value.charAt(0).toUpperCase() + value.slice(1);
             $("#card-recomendation").append(card + value + ccard);
         });
