@@ -9,7 +9,7 @@ from django.core import serializers
 def index(request):
     return render(request, 'kutipan_penyemangat_index.html')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='/login/')
 def add_quotes(request):
     if request.method == 'POST':
         form = QuotesForm(request.POST)
@@ -21,7 +21,7 @@ def add_quotes(request):
         response = {'form': form}
         return render(request, 'kutipan_penyemangat_form.html', response) 
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='/login/')
 def json_kutipan_penyemangat(request):
     data = serializers.serialize('json', Quotes.objects.all())
     return HttpResponse(data, content_type="application/json")
