@@ -305,8 +305,8 @@
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Upss...',
-                        text: 'Form yang Anda isi tidak valid!',
+                        title: 'Form yang Anda isi tidak valid!',
+                        text: 'Silakan mengisi form kembali',
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#0b36a8',
                     })
@@ -316,11 +316,12 @@
             error: function(response) {
                 Swal.fire({
                         icon: 'error',
-                        title: 'Upss...',
-                        text: 'Terjadi error',
+                        title: 'Upss, terjadi error...',
+                        text: 'Coba refresh halaman ini dan kirim ulang pesan Anda',
                         confirmButtonText: 'OK',
                         confirmButtonColor: '#0b36a8',
-                    })
+                })
+                document.getElementById("contact-form").reset();
             }
         })
     })
