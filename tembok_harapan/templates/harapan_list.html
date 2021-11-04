@@ -1,5 +1,57 @@
-<h3>harapan list</h3>
-{% for i in list_harapan %}
-    {{i.title}}
-    {{i.harapan}}
-{% endfor %}
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Tembok Harapan{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1 text-center">
+                <h1>Harapan</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+<div class="ex-basic-1 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                {% if list_harapan %}
+                    <table class="journal-table">
+                        <tr>
+                            <th>Judul</th>
+                            <th>Harapanmu</th>
+                        </tr>
+                        {% for i in list_harapan %}
+                        <tr>
+                            <td>{{i.title}}</td>
+                            <td>{{i.harapan}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                {% else %}
+                    <h3>Sepertinya, Anda belum pernah membuat harapan.</h3>
+                {% endif %}
+            </div> 
+        </div> 
+    </div> 
+</div> 
+
+<div class="ex-basic-1 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h5>Harapan apa yang kamu inginkan ?</h5>
+                <br>
+                <a class="btn-solid-lg" href="{% url 'tembok_harapan:add_harapan' %}">Tambahkan Harapan</a>
+            </div>
+        </div> 
+    </div> 
+</div> 
+{% endblock %}

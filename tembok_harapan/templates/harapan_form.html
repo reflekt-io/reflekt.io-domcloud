@@ -1,5 +1,57 @@
-<form class="form-curhat" action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" class="button">
-  </form>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Tembok Harapan{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1 text-center">
+                <h1>Harapan Baru</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+
+<div class="ex-basic-1 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Tuliskan Harapanmu</h2>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <!-- Form -->
+                <form id="journal-form" method="POST" action="">
+                    {% csrf_token %}
+                    <p>Hal apa yang sangat kamu harapkan ?</p>
+                    <div class="bulletless-form" id="feeling">
+                        {{ form.title }}
+                    </div>
+                    <p>Apa yang kamu akan lakukan agar dapat mewujudkan harapanmu?</p>
+                    <div class="bulletless-form" id="factor">
+                        {{ form.harapan }}
+                    </div>
+                    <br>
+                    <div>
+                        <input class="btn-solid-lg" type="submit" value="Submit" />
+                    </div>
+                </form>
+                <!-- end of contact form -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+{% endblock %}
+
