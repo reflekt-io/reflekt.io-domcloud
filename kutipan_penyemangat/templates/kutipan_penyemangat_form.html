@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kutipan Penyemangat Form</title>
-  
+
   <link rel="stylesheet" href="{% static 'css/kutipan_penyemangat_form.css' %}" />
 </head>
 
@@ -26,13 +26,21 @@
                 <div class="inputs">
                   {{form.name}}
                   {{form.quotes_form}}
-                  <button>Add New Quotes</button>
+                  <input type="submit" value="Add Notes" class="button"/>
+                  <br>
+                  <br>
+                  <br>
+                  <button><a class="btn btn-primary btn-lg btn-block" href="./" role="button">Kembali</a></button>
                 </div>
               </form>
-             
-            </section>          
-          </div>    
+            </section>
+            <div>
+            </div>
+          </div>
+        </div>
       </form>
-    </div>  
+    </div>
+  </div>
 </body>
+
 </html>
