@@ -47,7 +47,7 @@
                         <input class="btn-solid-lg" name="submit" type="submit" value="Submit" />
                     </div>
                 </form>
-                <!-- end of contact form -->
+                <!-- end of harapan form -->
 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -55,3 +55,49 @@
 </div>
 {% endblock %}
 
+<script type="text/javascript">
+    $(document).on('submit', '#harapan-form', function(e) {
+        e.preventDefault();
+        var form = $("#harapan-form");
+
+        $.ajax({
+            url:'',
+            type: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+            header: {'X-CSRFToken': '{% csrf_token %}'},
+            success: function(response) {
+                var success = response['success']
+                if(success){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Terima kasih!',
+                        text: 'Pesan Anda sudah terkirim',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                    })
+
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Form yang Anda isi tidak valid!',
+                        text: 'Silakan mengisi form kembali',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                    })
+                }
+                document.getElementById("harapan-form").reset();
+            },
+            error: function(response) {
+                Swal.fire({
+                        icon: 'error',
+                        title: 'Upss, terjadi error...',
+                        text: 'Coba refresh halaman ini dan kirim ulang pesan Anda',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#0b36a8',
+                })
+                document.getElementById("harapan-form").reset();
+            }
+        })
+    })
+</script>
