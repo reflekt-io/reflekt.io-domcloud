@@ -18,7 +18,7 @@ def add_harapan(request):
             harapan_form = form.save(commit=False)
             harapan_form.user = request.user
             harapan_form.save()
-            return response.HttpResponseRedirect('/')
+            return response.HttpResponseRedirect('/tembok-harapan')
 
     else:
         form = harapanForm()
