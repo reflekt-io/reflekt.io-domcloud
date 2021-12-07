@@ -52,7 +52,7 @@ def add_journal_flutter(request):
         # user = request.user
         feeling = data["feeling"]
         factor = data["factor"]
-        anxiety_rate = data["anxiety_rate"]
+        anxiety_rate = int(data["anxiety_rate"]) # since JSON only accepts String
         summary = data["summary"]
         
         # create object of form
@@ -63,7 +63,7 @@ def add_journal_flutter(request):
         journal_form.factor = factor
         journal_form.anxiety_rate = anxiety_rate
         journal_form.summary = summary
-        journal_form.user = request.user
+        journal_form.user = request.user # Unsure about this LOL
 
         # Save the data to the database
         journal_form.save()
