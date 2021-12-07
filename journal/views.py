@@ -25,6 +25,8 @@ def add_journal(request):
     if form.is_valid() and request.method == 'POST':
         # save the form data to the model
         journal_form = form.save(commit=False)
+        # print(journal_form.feeling) -> ['antusias', 'gembira', 'semangat', 'bingung']
+        # print(request.user) -> nama usernya (contoh: admin)
         journal_form.user = request.user
         journal_form.save()
         # return to index after saving data (POST Redirect)
