@@ -49,7 +49,6 @@ def add_journal_flutter(request):
         data = json.loads(request.body)
 
         # Parse the data
-        # user = request.user
         feeling = data["feeling"]
         factor = data["factor"]
         anxiety_rate = int(data["anxiety_rate"]) # since JSON only accepts String
@@ -63,13 +62,13 @@ def add_journal_flutter(request):
         journal_form.factor = factor
         journal_form.anxiety_rate = anxiety_rate
         journal_form.summary = summary
-        journal_form.user = request.user # Unsure about this LOL
+        journal_form.user = request.user
 
         # Save the data to the database
         journal_form.save()
 
         # return success JSON response to be processed in Flutter
-        return JsonResponse({"status": "success"})
+        return JsonResponse({"status": "success"}, status=200)
     # Else, return error JSON response
     else:
-        return JsonResponse({"status": "error"})
+        return JsonResponse({"status": "error"}, status=401)
