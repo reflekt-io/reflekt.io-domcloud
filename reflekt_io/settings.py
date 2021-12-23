@@ -66,7 +66,6 @@ INSTALLED_APPS = [
     'deteksi_depresi',
     'refleksi',
     'about_us',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
