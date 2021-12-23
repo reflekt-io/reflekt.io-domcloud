@@ -1,5 +1,5 @@
 from django.urls import path
-from main.views import home, loginUser, logoutUser, registerUser
+from main.views import *
 
 app_name = 'main'
 
@@ -8,4 +8,6 @@ urlpatterns = [
     path('login', loginUser, name='login'),
     path('register', registerUser, name='register'),
     path('logout', logoutUser, name='logout'),
+    path('loginflutter', loginFlutter, name='loginFlutter'),
+    path('registerflutter',registerFlutter,name='registerFlutter'),
 ]
