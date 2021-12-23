@@ -45,25 +45,26 @@ def get_journal_json(request):
 def add_journal_flutter(request):
     # request.method SHOULD BE POST (prevent from SQL injection)
     if request.method == 'POST':
+        print(request.body)
         # Load data from JSON sent by Flutter app
         data = json.loads(request.body)
 
         # Parse the data
-        feeling = data["feeling"]
-        factor = data["factor"]
+        # Change string to list for feeling and factor
+        feeling = data["feeling"][1:-1].split(', ')
+        factor = data["factor"][1:-1].split(', ')
         anxiety_rate = int(data["anxiety_rate"]) # since JSON only accepts String
         summary = data["summary"]
-        
-        # create object of form
-        journal_form = JournalForm()
-        
-        # save the form data to the model
-        journal_form.feeling = feeling
-        journal_form.factor = factor
-        journal_form.anxiety_rate = anxiety_rate
-        journal_form.summary = summary
-        journal_form.user = request.user
 
+        # create object with data gathered from Flutter form
+        journal_form = Journal(
+            feeling = feeling,
+            factor = factor,
+            anxiety_rate = anxiety_rate,
+            summary = summary,
+            user = request.user
+        )
+        
         # Save the data to the database
         journal_form.save()
 
