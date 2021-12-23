@@ -1,4 +1,5 @@
 import json
+from django.contrib.auth.backends import UserModel
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
@@ -70,25 +71,23 @@ def loginFlutter(request):
           "message": "Failed to Login, check your email/password."
         }, status=401)
 
+@csrf_exempt
 def registerFlutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
 
         username = data["username"]
         email = data["email"]
-        password_1 = data["password1"]
-        password_2 = data["password2"]
+        password1 = data["password1"]
+        password2 = data["password2"]
 
-        register_form = CreateUserForm()
+        newUser = UserModel.objects.create_user(
+        username = username, 
+        email = email,
+        password = password1,
+        )
 
-        register_form.username = username
-        register_form.email = email
-        register_form.password1 = password_1
-        register_form.password2 = password_2
-
-        register_form.save()
+        newUser.save()
         return JsonResponse({"status": "success"}, status=200)
-    # Else, return error JSON response
     else:
         return JsonResponse({"status": "error"}, status=401)
-        
