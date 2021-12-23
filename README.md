@@ -67,6 +67,7 @@ Berikut ini adalah sumber referensi yang digunakan dalam pembuatan proyek ini.
 - [Relax Color Scheme » Blue » SchemeColor.com](https://www.schemecolor.com/relax-color.php)
 - [Mark – Free Bootstrap 4 HTML5 Personal Portfolio Website Template - ThemeWagon](https://themewagon.com/themes/free-bootstrap-4-html-5-personal-portfolio-website-template-mark/)
 - [Beautiful Free Images & Pictures | Unsplash](https://unsplash.com)
+- [Django CORS Guide: What It Is and How to Enable It](https://www.stackhawk.com/blog/django-cors-guide/)
 
 [actions-badge]: https://github.com/reflekt-io/reflekt.io/workflows/Test%20and%20Deploy/badge.svg
 [commits-gh]: https://github.com/reflekt-io/reflekt.io/commits/master
