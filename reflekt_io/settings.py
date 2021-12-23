@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'deteksi_depresi',
     'refleksi',
     'about_us',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'reflekt_io.urls'
@@ -171,3 +173,11 @@ for directory in [*STATICFILES_DIRS, STATIC_ROOT]:
 # Enable compression and caching features of whitenoise.
 # You can remove this if it causes problems on your setup.
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+CORS_ALLOW_ALL_ORIGINS=True
+CORS_ALLOW_CREDENTIALS=True
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
