@@ -57,6 +57,7 @@ def loginFlutter(request):
             # Redirect to a success page.
             return JsonResponse({
               "status": True,
+              "username": request.user.username,
               "message": "Successfully Logged In!"
             }, status=200)
         else:
@@ -79,7 +80,6 @@ def registerFlutter(request):
         username = data["username"]
         email = data["email"]
         password1 = data["password1"]
-        password2 = data["password2"]
 
         newUser = UserModel.objects.create_user(
         username = username, 
