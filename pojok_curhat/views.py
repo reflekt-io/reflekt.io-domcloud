@@ -1,8 +1,10 @@
-from django.http.response import HttpResponse, HttpResponseRedirect
+import json
+from django.http.response import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from .models import Curhatan
 from .forms import CurhatForm
 from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 # imported login required
 from django.contrib.auth.decorators import login_required
@@ -45,3 +47,20 @@ def navbar(request):
 def json_pojok_curhat(request):
     data = serializers.serialize('json', Curhatan.objects.all())
     return HttpResponse(data, content_type="application/json")
+
+@csrf_exempt
+def add_pojok_curhat_flutter(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        
+        fromCurhat = data["fromCurhat"]
+
+        title = data["title"]
+
+        message = data["message"]
+
+        curhat_form = Curhatan(fromCurhat=fromCurhat, title = title, message = message)
+        curhat_form.save()
+        return JsonResponse({"status": "success"}, status = 200)
+    else:
+        return JsonResponse({"status": "error"}, status = 401)
