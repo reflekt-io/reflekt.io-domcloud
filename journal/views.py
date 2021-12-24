@@ -45,7 +45,6 @@ def get_journal_json(request):
 def add_journal_flutter(request):
     # request.method SHOULD BE POST (prevent from SQL injection)
     if request.method == 'POST':
-        print(request.body)
         # Load data from JSON sent by Flutter app
         data = json.loads(request.body)
 
