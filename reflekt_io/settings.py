@@ -89,8 +89,12 @@ CORS_ALLOW_METHODS = [
     'POST',
 ]
 
+# Disable due to Heroku use HTTP
+"""
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+"""
+
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 
