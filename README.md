@@ -10,7 +10,7 @@ Sebuah tempat baru yang akan menjadi tempat aman untuk merefleksikan diri, berke
 > pada Semester Gasal, Tahun Ajaran 2021/2022.
 
 ## 🌏 Situs Web 🌎
-Proyek ini dapat diakses di [reflekt-io.herokuapp.com](https://reflekt-io.herokuapp.com/).
+Proyek ini dapat diakses di <https://reflekt-io.up.railway.app>.
 
 ## 👨‍💻 Pengembang Aplikasi 👩‍💻
 Proyek ini dibuat oleh kelompok C04 yang beranggotakan sebagai berikut.
