@@ -1,2 +1,1 @@
-migrate: python manage.py migrate
-web: gunicorn reflekt_io.wsgi
+web: python manage.py migrate && gunicorn reflekt_io.wsgi
