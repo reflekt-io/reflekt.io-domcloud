@@ -10,10 +10,11 @@ Sebuah tempat baru yang akan menjadi tempat aman untuk merefleksikan diri, berke
 > pada Semester Gasal, Tahun Ajaran 2021/2022.
 
 ## 🌏 Situs Web 🌎
-Proyek ini dapat diakses di <https://reflekt-io.up.railway.app>.
+Proyek ini dapat diakses di <https://reflektio.domcloud.io/>.
 
 ## 👨‍💻 Pengembang Aplikasi 👩‍💻
 Proyek ini dibuat oleh kelompok C04 yang beranggotakan sebagai berikut.
+
 - [Aurelia Amanda Robert](https://github.com/orelar) (2006527903)
 - [Kevin](https://github.com/vnctkevin) (2006483795)
 - [Loanda Gunawan](https://github.com/Gloanda) (2006521585)
