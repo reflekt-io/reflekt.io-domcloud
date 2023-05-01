@@ -40,9 +40,7 @@ PRODUCTION = os.getenv('DATABASE_URL') is not None
 # DEBUG = not PRODUCTION
 DEBUG = True
 
-HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME', '')
-
-ALLOWED_HOSTS = [f'{HEROKU_APP_NAME}.up.railway.app']
+ALLOWED_HOSTS = []
 
 if not PRODUCTION:
     ALLOWED_HOSTS += ['.localhost', '127.0.0.1', '[::1]']
