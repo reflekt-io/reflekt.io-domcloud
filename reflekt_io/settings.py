@@ -40,7 +40,7 @@ PRODUCTION = os.getenv('DATABASE_URL') is not None
 # DEBUG = not PRODUCTION
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['d0kk4o0.35.209.250.177.sslip.io']
 
 if not PRODUCTION:
     ALLOWED_HOSTS += ['.localhost', '127.0.0.1', '[::1]']
